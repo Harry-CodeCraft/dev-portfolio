@@ -1,0 +1,22 @@
+[
+  {
+    "date": "June 2021 – June 2023",
+    "title": "Master of Computer Applications (MCA)",
+    "location": "Knowledge park, Greater Noida, UP, India",
+    "company": "GNIOT College",
+    "points": [
+      "Completed with a strong focus on practical development. Built a full-featured eCommerce website as a final year project.",
+      "Technoloy used React, Express, and MySQL—including user authentication, product listings, shopping cart, and order management."
+     ]
+  },
+  {
+    "date": "June 2016 – June 2019",
+    "title": "Bachelor of Computer Applications (BCA)",
+    "location": "Faridabad, HR, India",
+    "company": "DAV Centenary College",
+    "points": [
+      "Developed an Attendance Management System as a final year project.",
+      "Technology used PHP and PgAdmin (PostgreSQL) attendance tracking and generating detailed reports for students and faculty."
+     ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "date": "Sept 2022 – Present",
+    "title": "Software Developer - Full Stack Engineer",
+    "company": "OMNIE SOLUTIONS (I) PVT LTD",
+    "location": "Noida, UP, India",
+    "subHeading":
+      "~ Serving as a contractor for the product-based company, Optum (UHG)",
+    "points": [
+      "Applied DSA Algorithm to enhance search and caching mechanisms.",
+      "Integrated Jenkins for CI/CD Pipelines of REST APIs and Microservices.",
+      "Wrote unit test cases using Jest to ensure code quality and reliability.",
+      "Successfully managed a team, fostered collaboration, and drove project success.",
+      "Managed tasks and user stories using Rally following Agile and Scrum methodologies.",
+      "Designed and implemented scalable microservice with load-balancing and scaling strategies.",
+      "Improved application performance by 20% and reducing API response time by 30% through caching.",
+      "leveraging MERN stack (MongoDB, Express.js, React, Node.js), Java, Jenkins, Azure, Salesforce, Kubernetes, Dynatrace, SonarQube."
+    ]
+  }
+]
