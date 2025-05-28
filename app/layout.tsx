@@ -52,6 +52,11 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  icons: {
+    icon: "/favio.jpeg",
+    apple: "/favio.jpeg",
+    shortcut: "/favio.jpeg",
+  },
 };
 
 export default function RootLayout({
