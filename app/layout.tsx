@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favio.jpeg",
-    apple: "/favio.jpeg",
-    shortcut: "/favio.jpeg",
+    icon: "https://www.harrycodecraft.com/images/favio.jpeg",
+    apple: "https://www.harrycodecraft.com/images/favio.jpeg",
+    shortcut: "https://www.harrycodecraft.com/images/favio.jpeg",
   },
 };
 
