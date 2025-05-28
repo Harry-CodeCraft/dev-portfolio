@@ -2,12 +2,12 @@
 
 import "./main.css";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Typography, Avatar, useTheme, Grid, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Download } from "@mui/icons-material";
-import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons/page";
-import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon/page";
+import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
+import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon";
 import { styles } from "@/app/components/portfolioComponents/mainSection/mainStyle";
 
 // Only styled for the root container
@@ -19,15 +19,16 @@ const Root = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-export default function MainSection() {
+const titles = [
+  "Software Developer",
+  "Software Engineer",
+  "Tech Blogger",
+  "Dev Content Creator",
+];
+
+const MainSection = () => {
   const theme = useTheme();
   const sx = styles(theme);
-  const titles = [
-    "Software Developer",
-    "Software Engineer",
-    "Tech Blogger",
-    "Dev Content Creator",
-  ];
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [hovered, setHovered] = useState(false);
@@ -45,7 +46,7 @@ export default function MainSection() {
       }, 1000);
     }
     return () => clearTimeout(timeout);
-  }, [displayed, titleIndex, titles]);
+  }, [displayed, titleIndex]);
 
   return (
     <>
@@ -150,4 +151,6 @@ export default function MainSection() {
       </Root>
     </>
   );
-}
+};
+
+export default MainSection;
