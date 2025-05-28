@@ -2,7 +2,7 @@
 
 import { Box, IconButton, Typography } from "@mui/material";
 import { memo, useEffect, useState } from "react";
-import { socialMediaIconArray } from "../socialMediaIcons/page";
+import { socialMediaIconArray } from "../socialMediaIcons";
 import styleConstants from "@/app/theme/styleConstants";
 
 const SingletonSocialIcon = ({ icons }: { icons: string }) => {
