@@ -33,22 +33,33 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
   return (
     <AppBar
       position="fixed"
-      elevation={elevated ? 4 : 0}
+      elevation={0}
       sx={{
-        backgroundColor: elevated ? "rgb(0 23 31 / 80%)" : "transparent",
+        backgroundColor: "transparent",
         color:
           mode === "light"
             ? colorPalette.darkCharcoal
             : elevated
             ? colorPalette.platinumWhite
             : colorPalette.offWhite,
-        boxShadow: elevated ? undefined : "none",
-        transition: "background-color 0.3s, box-shadow 0.3s, color 0.3s",
-        backdropFilter: elevated ? "blur(8px)" : "none",
       }}
     >
-      <Toolbar sx={{ justifyContent: "flex-end", minHeight: 64 }}>
-        <Box>
+      <Toolbar
+        sx={{ justifyContent: "center", minHeight: { xs: "64px", md: "80px" } }}
+      >
+        <Box
+          sx={{
+            backgroundColor: elevated ? "rgb(0, 0, 0, 0.2)" : "transparent",
+            boxShadow: elevated ? "rgba(0, 0, 0, 0.1) 0px 4px 12px" : "none",
+            border: elevated ? "1px solid rgba(255, 255, 255, 0.2)" : "none",
+            transition:
+              "background-color 0.3s, box-shadow 0.3s, color 0.3s, border 0.3s",
+            backdropFilter: elevated ? "blur(8px)" : "none",
+            px: 2,
+            py: 1,
+            borderRadius: 10,
+          }}
+        >
           {navLinks.map((link) => (
             <Button
               key={link.label}
@@ -64,10 +75,10 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
               {link.label}
             </Button>
           ))}
+          <IconButton onClick={toggleMode} color="inherit">
+            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
         </Box>
-        <IconButton onClick={toggleMode} color="inherit">
-          {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
       </Toolbar>
     </AppBar>
   );
