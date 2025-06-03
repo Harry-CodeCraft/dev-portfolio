@@ -1,19 +1,19 @@
 "use client";
 
 import { Box, IconButton, Typography } from "@mui/material";
-import { memo, useEffect, useState } from "react";
-import { socialMediaIconArray } from "../socialMediaIcons";
+import { useEffect, useState, memo } from "react";
 import styleConstants from "@/app/theme/styleConstants";
+import { ISocialMediaIcon, socialMediaIconArray } from "../icons";
 
-const SingletonSocialIcon = ({ icons }: { icons: string }) => {
+const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
   const { fontSizes, colorPalette } = styleConstants;
-  const [iconsArrayCopy, setIconsArrayCopy] = useState(socialMediaIconArray);
+  const [iconsArrayCopy, setIconsArrayCopy] = useState<ISocialMediaIcon[]>([]);
+
   useEffect(() => {
     if (icons !== "all") {
       const filteredIcons = socialMediaIconArray.filter((icon) =>
         icons.includes(icon.label)
       );
-      socialMediaIconArray.length = 0; // Clear the original array
       setIconsArrayCopy(filteredIcons); // Add filtered icons
     }
   }, [icons]);
@@ -39,8 +39,7 @@ const SingletonSocialIcon = ({ icons }: { icons: string }) => {
           mt: 1,
         }}
       >
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        {iconsArrayCopy.map(({ icon, label }: any) => (
+        {iconsArrayCopy.map(({ icon, label }) => (
           <span key={label} style={{ display: "flex", alignItems: "center" }}>
             <IconButton
               component="a"
@@ -89,6 +88,9 @@ const SingletonSocialIcon = ({ icons }: { icons: string }) => {
       </Box>
     </Box>
   );
-};
+});
 
-export default memo(SingletonSocialIcon);
+// Set the display name for the memoized component
+SingletonSocialIcon.displayName = "SingletonSocialIcon";
+
+export default SingletonSocialIcon;

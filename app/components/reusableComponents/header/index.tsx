@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { AppBar, Toolbar, Button, Box, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
 
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import styleConstants from "@/app/theme/styleConstants";
+import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { GoHomeFill } from "react-icons/go";
+import { FaUserCircle } from "react-icons/fa";
 
 interface HeaderProps {
   mode: "light" | "dark";
@@ -13,14 +17,18 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/", icon: <GoHomeFill size={25} /> },
+  { label: "Portfolio", href: "/portfolio", icon: <FaUserCircle size={25} /> },
 ];
+
+function handleNavigation(href: string, router: AppRouterInstance) {
+  router.push(href);
+}
 
 export default function Header({ mode, toggleMode }: HeaderProps) {
   const [elevated, setElevated] = useState(false);
   const { colorPalette } = styleConstants;
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +71,7 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
           {navLinks.map((link) => (
             <Button
               key={link.label}
-              href={link.href}
+              onClick={() => handleNavigation(link.href, router)}
               sx={{
                 color: "inherit",
                 fontWeight: 600,
@@ -72,12 +80,12 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
                 fontSize: "1rem",
               }}
             >
-              {link.label}
+              {link.icon}
             </Button>
           ))}
-          <IconButton onClick={toggleMode} color="inherit">
+          <Button onClick={toggleMode} color="inherit">
             {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>
