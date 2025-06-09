@@ -3,12 +3,7 @@
 import { Box } from "@mui/material";
 import Cards from "./components/reusableComponents/cards";
 
-const cards = [
-  { id: 1, type: "Hover Dynamic Card" },
-  { id: 2, type: "Identity Card" },
-  { id: 3, type: "Hover Dynamic Card" },
-  // Add more cards as needed
-];
+const cards = [{ id: 2, type: "Identity Card" }];
 
 export default function Home() {
   return (

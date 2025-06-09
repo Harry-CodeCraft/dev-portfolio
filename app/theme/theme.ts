@@ -9,20 +9,29 @@ const getTheme = (mode: "light" | "dark") =>
       mode,
       ...(mode === "light"
         ? {
-            primary: { main: "#1976d2" }, // custom light primary
-            secondary: { main: "#9c27b0" },
+            primary: {
+              main: colorPalette.azure,
+              light: colorPalette.vibrantBlue,
+            }, // custom light primary
+            secondary: { main: colorPalette.azure },
             background: { default: colorPalette.offWhite, paper: "#fff" },
             text: {
-              primary: colorPalette.azure,
+              primary: colorPalette.justBlack,
               secondary: colorPalette.darkCharcoal,
             },
           }
         : {
-            primary: { main: "#90caf9", light: colorPalette.azure }, // custom dark primary
-            secondary: { main: "#ce93d8" },
+            primary: {
+              main: colorPalette.azure,
+              light: colorPalette.vibrantBlue,
+            }, // custom dark primary
+            secondary: {
+              main: colorPalette.azure,
+              light: colorPalette.offWhite,
+            },
             background: {
               default: colorPalette.midnightBlue,
-              paper: "#1e1e1e",
+              paper: colorPalette.midnightBlue2,
             },
             text: {
               primary: colorPalette.offWhite,

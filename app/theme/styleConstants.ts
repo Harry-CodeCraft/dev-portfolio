@@ -4,7 +4,7 @@ const colorPalette = {
   midnightBlue: "#00171F",
   midnightBlue2: "#001319",
   prussianBlue: "#002659",
-  nonBlue: "#ADEBFF",
+  vibrantBlue: "#0066ff",
   azure: "#1976d2",
   charcoal: "#303134",
   darkCharcoal: "#1f1f1f",
@@ -13,6 +13,9 @@ const colorPalette = {
   platinumWhite80: "#787878cc",
   lightWhite: "##fff2",
   justWhite: "#f6f6f6",
+  orange: "#ff8904",
+  neonOrange: "#f54900",
+  justBlack: "#141417",
 };
 
 const fontSizes = {

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Next.js",
+    "iconClass": "devicon-nextjs-original-wordmark"
+  },
+  { "name": "React.js", "iconClass": "devicon-react-original colored" },
+  {
+    "name": "Angular",
+    "iconUrl":
+      "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/angular/angular-original.svg"
+  },
+  { "name": "Express.js", "iconClass": "devicon-express-original colored" },
+  { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+  { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+  { "name": "JavaScript", "iconClass": "devicon-javascript-plain colored" },
+  { "name": "Java", "iconClass": "devicon-java-plain colored" },
+  { "name": "Python", "iconClass": "devicon-python-plain colored" },
+  { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" },
+  { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" },
+  { "name": "TailwindCSS", "iconClass": "devicon-tailwindcss-plain colored" },
+  { "name": "Kubernetes", "iconClass": "devicon-kubernetes-plain colored" },
+  { "name": "Docker", "iconClass": "devicon-docker-plain colored" },
+  {
+    "name": "AWS",
+    "iconClass": "devicon-amazonwebservices-plain-wordmark colored"
+  },
+  {
+    "name": "Azure",
+    "iconClass": "devicon-azure-plain colored"
+  },
+  {
+    "name": "Git",
+    "iconClass": "devicon-git-plain colored"
+  },
+  {
+    "name": "ChatGPT API",
+    "iconUrl":
+      "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+  }
+]

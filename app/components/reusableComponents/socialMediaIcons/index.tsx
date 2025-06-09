@@ -24,7 +24,7 @@ const SocialMediaIcons = memo(() => {
           boxShadow: "0 2px 16px 0 rgba(0,0,0,0.12)",
           border: "2px solid rgba(255,255,255,0.08)",
           backdropFilter: "blur(2px)",
-          width: "326px",
+          width: "286px",
           py: 1.1,
         }}
       >
@@ -41,8 +41,8 @@ const SocialMediaIcons = memo(() => {
               color: "#e7e8e9",
               bgcolor: "transparent",
               borderRadius: "50%",
-              width: 48,
-              height: 48,
+              width: 40,
+              height: 40,
               transition: "all 0.2s",
               mx: 1,
               "&:hover": {
@@ -50,6 +50,10 @@ const SocialMediaIcons = memo(() => {
                 color: "#fff",
                 borderColor: "#fff",
                 transform: "scale(1.08)",
+              },
+              "& .MuiSvgIcon-root": {
+                width: "1.5rem",
+                height: "1.5rem",
               },
             }}
           >
