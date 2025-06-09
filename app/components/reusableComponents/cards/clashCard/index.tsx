@@ -86,7 +86,7 @@ const ClashCard: React.FC = () => {
           E-COMMERCE PORTAL
         </Typography>
         <Typography variant="body2" sx={{ fontSize: 10, textAlign: "center" }}>
-          It's a dynamic multivendor eCommerce platform that empowers...
+          It&apos;s a dynamic multivendor eCommerce platform that empowers...
         </Typography>
         <Box
           sx={{
