@@ -66,8 +66,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const hideFlow = process.env.ENABLE_COMING_SOON;
-  // eslint-disable-next-line no-console
-  console.log("Hide Flow:", hideFlow);
 
   return (
     <html lang="en">
