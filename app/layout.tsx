@@ -4,6 +4,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { StyledRoot } from "./theme/styledRoot";
 import ComingSoon from "./components/comingSoon";
+import getConfig from "next/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,9 +66,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const hideFlow = process.env.ENABLE_COMING_SOON;
-  // eslint-disable-next-line no-console
-  console.log("Hide Flow:", hideFlow);
+  const { publicRuntimeConfig } = getConfig();
 
   return (
     <html lang="en">
@@ -81,7 +80,11 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
-          {!hideFlow ? <StyledRoot>{children}</StyledRoot> : <ComingSoon />}
+          {!publicRuntimeConfig.enableComingSoon ? (
+            <StyledRoot>{children}</StyledRoot>
+          ) : (
+            <ComingSoon />
+          )}
         </AppRouterCacheProvider>
       </body>
     </html>
