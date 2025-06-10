@@ -50,6 +50,9 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
             : elevated
             ? colorPalette.platinumWhite
             : colorPalette.offWhite,
+
+        bottom: { xs: 0, md: "auto" },
+        top: { xs: "auto", md: 0 },
       }}
     >
       <Toolbar
@@ -57,12 +60,24 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
       >
         <Box
           sx={{
-            backgroundColor: elevated ? "rgb(0, 0, 0, 0.2)" : "transparent",
-            boxShadow: elevated ? "rgba(0, 0, 0, 0.1) 0px 4px 12px" : "none",
-            border: elevated ? "1px solid rgba(255, 255, 255, 0.2)" : "none",
+            backgroundColor: {
+              xs: "rgb(0, 0, 0, 0.2)",
+              md: elevated ? "rgb(0, 0, 0, 0.2)" : "transparent",
+            },
+            boxShadow: {
+              xs: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+              md: elevated ? "rgba(0, 0, 0, 0.1) 0px 4px 12px" : "none",
+            },
+            border: {
+              xs: "1px solid rgba(255, 255, 255, 0.2)",
+              md: elevated ? "1px solid rgba(255, 255, 255, 0.2)" : "none",
+            },
             transition:
               "background-color 0.3s, box-shadow 0.3s, color 0.3s, border 0.3s",
-            backdropFilter: elevated ? "blur(8px)" : "none",
+            backdropFilter: {
+              xs: "blur(8px)",
+              md: elevated ? "blur(8px)" : "none",
+            },
             px: 2,
             py: 1,
             borderRadius: 10,

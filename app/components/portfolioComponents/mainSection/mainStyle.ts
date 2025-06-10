@@ -3,16 +3,19 @@ import styleConstants from "@/app/theme/styleConstants";
 
 export const styles = (theme: any) => {
   const isDark = theme.palette.mode === "dark";
-  const { fontSizes, colorPalette } = styleConstants;
+  const { fontSizes } = styleConstants;
+  const { primary } = theme.palette;
+
   return {
     name: {
       fontWeight: 700,
-      fontSize: { xs: fontSizes.xxLarge, md: fontSizes.xHuge },
+      fontSize: { xs: fontSizes.xxLarge, md: fontSizes.huge },
       textAlign: { xs: "center", md: "left" },
     },
     title: {
       mb: 2,
       textAlign: { xs: "center", md: "left" },
+      fontSizes: { xs: fontSizes.large, md: fontSizes.large },
     },
     subheadingName: {
       borderRight: "2px solid",
@@ -32,7 +35,7 @@ export const styles = (theme: any) => {
           : "rgba(149, 157, 165, 0.2) 0px 8px 24px"
       }`,
       border: `6px solid ${
-        isDark ? theme.palette.primary.light : theme.palette.primary.main
+        isDark ? theme.palette.primary.main : theme.palette.primary.light
       }`,
     },
     avtaarWrapper: {
@@ -72,12 +75,12 @@ export const styles = (theme: any) => {
       fontFamily: "monospace",
       position: "absolute",
       display: { xs: "none", md: "block" },
-      top: "-14%",
-      left: "32%",
+      top: "-10%",
+      left: "35%",
       transform: "translate(-50%, -50%)",
       color: theme.palette.mode === "dark" ? "#fff2" : "#0002",
       fontWeight: 700,
-      fontSize: { xs: fontSizes.medium, md: fontSizes.huge },
+      fontSize: { xs: fontSizes.medium, md: fontSizes.xxxLarge },
       zIndex: 0,
       userSelect: "none",
       pointerEvents: "none",
@@ -88,12 +91,12 @@ export const styles = (theme: any) => {
       fontFamily: "monospace",
       display: { xs: "none", md: "block" },
       position: "absolute",
-      bottom: "-50%",
-      left: "2%",
+      bottom: "-36%",
+      left: "5%",
       transform: "translate(-50%, -50%)",
       color: theme.palette.mode === "dark" ? "#fff2" : "#0002",
       fontWeight: 700,
-      fontSize: { xs: fontSizes.medium, md: fontSizes.huge },
+      fontSize: { xs: fontSizes.medium, md: fontSizes.xxxLarge },
       zIndex: 0,
       userSelect: "none",
       pointerEvents: "none",
@@ -108,14 +111,14 @@ export const styles = (theme: any) => {
       textTransform: "none",
       fontSize: "1rem",
       transition: "background 0.3s, color 0.3s, border-color 0.3s",
-      borderColor: colorPalette.azure,
-      color: "primary.main",
+      borderColor: primary.light,
+      color: primary.light,
       overflow: "hidden",
       position: "relative",
       "&:hover": {
-        backgroundColor: colorPalette.azure,
+        backgroundColor: primary.light,
         color: "white",
-        borderColor: colorPalette.azure,
+        borderColor: primary.light,
         ".download-icon": {
           transform: "translateX(6px) scale(1.2)",
           opacity: 1,

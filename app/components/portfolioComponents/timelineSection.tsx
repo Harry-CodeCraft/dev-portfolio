@@ -1,7 +1,6 @@
 "use client";
 import React, { memo, useEffect, useRef, useState } from "react";
-import { Box, Typography, useTheme, List, ListItem } from "@mui/material";
-import styleConstants from "@/app/theme/styleConstants";
+import { Box, Typography, List, ListItem, Theme } from "@mui/material";
 
 interface ExperienceItem {
   date: string;
@@ -47,11 +46,12 @@ function useInView({
   return [ref, once ? hasBeenInView : inView] as const;
 }
 
-const ExperienceEntry: React.FC<{ exp: ExperienceItem }> = ({ exp }) => {
-  const { colorPalette } = styleConstants;
+const ExperienceEntry: React.FC<{ exp: ExperienceItem; theme: Theme }> = ({
+  exp,
+  theme,
+}) => {
   const [ref, inView] = useInView({ threshold: 0.4, once: true });
-  const theme = useTheme();
-
+  const { secondary, primary } = theme.palette;
   return (
     <Box
       ref={ref}
@@ -72,12 +72,9 @@ const ExperienceEntry: React.FC<{ exp: ExperienceItem }> = ({ exp }) => {
           top: 8,
           width: 20,
           height: 20,
-          bgcolor:
-            theme.palette.mode === "dark"
-              ? colorPalette.offWhite
-              : "orange.400",
+          bgcolor: secondary.light,
           borderRadius: "50%",
-          border: `4px solid ${colorPalette.azure}`,
+          border: `4px solid ${primary.light}`,
           zIndex: 1,
           transition: "transform 0.2s",
         }}
@@ -116,18 +113,19 @@ const ExperienceEntry: React.FC<{ exp: ExperienceItem }> = ({ exp }) => {
 interface TimelineSectionProps {
   jsonData: ExperienceItem[];
   heading: string;
+  theme: Theme;
 }
 
 const TimelineSection: React.FC<TimelineSectionProps> = ({
   jsonData,
   heading,
+  theme,
 }) => {
-  const { colorPalette } = styleConstants;
+  const { primary, background } = theme.palette;
   const [sectionRef, sectionInView] = useInView({
     threshold: 0.15,
     once: true,
   });
-  const theme = useTheme();
 
   return (
     <Box
@@ -137,10 +135,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
         position: "relative",
         py: { xs: 6, md: 8 },
         px: { xs: 2, md: 8 },
-        bgcolor:
-          theme.palette.mode === "dark"
-            ? colorPalette.midnightBlue2
-            : colorPalette.justWhite,
+        bgcolor: background.paper,
         overflow: "hidden",
         transform: sectionInView ? "translateY(0)" : "translateY(50px)",
         opacity: sectionInView ? 1 : 0,
@@ -148,7 +143,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
       }}
     >
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           fontWeight: 700,
           mb: 6,
@@ -167,14 +162,14 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
             width: "4px",
             height: "calc(100% - 24px)",
             bgcolor:
-              theme.palette.mode === "dark" ? colorPalette.azure : "orange.400",
+              theme.palette.mode === "dark" ? primary.light : "orange.400",
             borderRadius: 2,
             zIndex: 0,
           }}
         />
         <Box>
           {jsonData.map((exp, idx) => (
-            <ExperienceEntry key={idx} exp={exp} />
+            <ExperienceEntry key={idx} exp={exp} theme={theme} />
           ))}
         </Box>
       </Box>

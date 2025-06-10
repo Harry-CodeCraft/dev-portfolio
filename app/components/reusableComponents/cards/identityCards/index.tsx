@@ -15,12 +15,14 @@ const styles = () => {
     card: {
       maxWidth: 300,
       margin: "auto",
-      borderRadius: 2,
+      borderRadius: 3,
+      overflow: "visible",
       bgcolor: "#fefefe",
       color: "#141417",
+      // background: `linear-gradient(135deg, ${colorPalette.justBlack} 0%, ${colorPalette.platinumWhite} 100%)`,
     },
     headerBox: {
-      bgcolor: colorPalette.azure,
+      bgcolor: colorPalette.justBlack,
       borderRadius: "8px 8px 0 0",
       color: colorPalette.platinumWhite,
       p: 3,
@@ -35,8 +37,15 @@ const styles = () => {
     titleText: {
       mt: 4,
       mb: 0,
-      pr: 4,
-      fontSize: fontSizes.xxLarge,
+      p: 4,
+      fontSize: fontSizes.xLarge,
+      lineHeight: 1.2,
+      "& span": {
+        backgroundColor: colorPalette.orange,
+        color: colorPalette.justBlack,
+        px: 1,
+        borderRadius: 1,
+      },
     },
     button: {
       bgcolor: "#141417",
@@ -84,8 +93,14 @@ const IdentityCard = () => {
           //   </Box>
           // }
         />
-        <Typography variant="h6" fontWeight={600} sx={sx.titleText}>
-          Senior Software Engineer
+        <Typography
+          variant="h6"
+          fontWeight={600}
+          sx={sx.titleText}
+          textAlign={"center"}
+        >
+          HARRY <br />
+          <span>CODECRAFT</span>
         </Typography>
       </Box>
       <CardContent sx={{ py: 2, px: 2 }}>

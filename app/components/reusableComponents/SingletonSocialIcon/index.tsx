@@ -34,7 +34,7 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
           boxShadow: "0 2px 16px 0 rgba(0,0,0,0.12)",
           border: "2px solid rgba(255,255,255,0.08)",
           backdropFilter: "blur(2px)",
-          width: "326px",
+          width: "286px",
           py: 1.1,
           mt: 1,
         }}
@@ -52,8 +52,8 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
                 color: "#e7e8e9",
                 bgcolor: "transparent",
                 borderRadius: "50%",
-                width: 48,
-                height: 48,
+                width: 40,
+                height: 40,
                 transition: "all 0.2s",
                 mx: 1,
                 "&:hover": {
@@ -61,6 +61,10 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
                   color: "#fff",
                   borderColor: "#fff",
                   transform: "scale(1.08)",
+                },
+                "& .MuiSvgIcon-root": {
+                  width: "1.5rem",
+                  height: "1.5rem",
                 },
               }}
             >
@@ -72,14 +76,15 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
                 <br />
                 <Typography
                   style={{
-                    fontSize: fontSizes.tiny,
+                    fontSize: fontSizes.xtiny,
                     lineHeight: 1,
                     color: colorPalette.platinumWhite80,
+                    paddingLeft: "0.5rem",
+                    paddingRight: "0.5rem",
                   }}
                 >
                   This is my professional Instagram account, where I share daily
-                  coding updates, <br />
-                  tech news, and developer tips.
+                  coding updates, tech news, and developer tips.
                 </Typography>
               </span>
             )}

@@ -2,8 +2,16 @@
 
 import "./main.css";
 
-import { useEffect, useState } from "react";
-import { Box, Typography, Avatar, useTheme, Grid, Button } from "@mui/material";
+import { useEffect, useMemo, useState } from "react";
+import {
+  Box,
+  Typography,
+  Avatar,
+  useTheme,
+  Grid,
+  Button,
+  Container,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Download } from "@mui/icons-material";
 import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
@@ -28,7 +36,7 @@ const titles = [
 
 const MainSection = () => {
   const theme = useTheme();
-  const sx = styles(theme);
+  const sx = useMemo(() => styles(theme), [theme]);
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [hovered, setHovered] = useState(false);
@@ -49,7 +57,7 @@ const MainSection = () => {
   }, [displayed, titleIndex]);
 
   return (
-    <>
+    <Container>
       <Root>
         <Grid
           container
@@ -65,7 +73,6 @@ const MainSection = () => {
               Harsh Singh
             </Typography>
             <Typography
-              variant="h6"
               sx={sx.title}
               style={{ minHeight: "2.5rem", fontFamily: "monospace" }}
             >
@@ -92,7 +99,11 @@ const MainSection = () => {
                   <Avatar
                     alt="Harsh Singh"
                     src="/images/profile2.avif"
-                    sx={{ ...sx.avatar, width: "100%", height: "100%" }}
+                    sx={{
+                      ...sx.avatar,
+                      height: { xs: "100%", md: "300px", lg: "350px" },
+                      width: { xs: "100%", md: "300px", lg: "350px" },
+                    }}
                   />
                 </Box>
                 {/* Back Avatar */}
@@ -100,7 +111,11 @@ const MainSection = () => {
                   <Avatar
                     alt="Harsh Singh Alt"
                     src="https://media.licdn.com/dms/image/v2/D5603AQHM2HMhGI8iXw/profile-displayphoto-shrink_400_400/B56ZbFqxv2GsAo-/0/1747073049679?e=1753920000&v=beta&t=lKhbnci7cqdnhuqnnpIQcBdpeRciKS2oq_N9tccUvnw"
-                    sx={{ ...sx.avatar, width: "100%", height: "100%" }}
+                    sx={{
+                      ...sx.avatar,
+                      height: { xs: "100%", md: "300px", lg: "350px" },
+                      width: { xs: "100%", md: "300px", lg: "350px" },
+                    }}
                   />
                 </Box>
               </Box>
@@ -121,7 +136,13 @@ const MainSection = () => {
               and dev content creator.
             </Typography>
             <Typography sx={sx.descCoverEnd}>&#125;</Typography>
-            <Box textAlign="left" mt={1}>
+            <Box
+              sx={{
+                textAlign: { xs: "center", md: "left" },
+                marginTop: { xs: "20px", md: "10px" },
+              }}
+              mt={1}
+            >
               <a
                 href="/harshSinghcv.pdf"
                 download
@@ -149,7 +170,7 @@ const MainSection = () => {
           </Grid>
         </Grid>
       </Root>
-    </>
+    </Container>
   );
 };
 
