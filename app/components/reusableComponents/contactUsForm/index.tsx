@@ -58,6 +58,17 @@ const ContactUsForm = () => {
 
   return (
     <Box sx={{ backgroundColor: theme.palette.background.paper }}>
+      <Typography
+        variant="h4"
+        sx={{
+          fontWeight: 700,
+          py: 3,
+          mt: 4,
+          textAlign: "center",
+        }}
+      >
+        Get in Touch
+      </Typography>
       <Container sx={{ ...sx.footerSection }}>
         <Box sx={{ mx: 4 }}>
           <Typography

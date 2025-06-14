@@ -1,0 +1,37 @@
+[
+        {
+            "title": "eCommerce",
+            "sub": "Multi-vendor eCommerce Platform",
+            "description": "Shopatone is a multivendor eCommerce platform where customers can register, shop, manage profiles, add addresses, and track, cancel, or return orders. Vendors can register, get verified by admin, and list products with multiple sizes, colors, and images. One admin manages multiple vendors and platform operations.",
+            "image": "https://www.creativefabrica.com/wp-content/uploads/2020/05/14/Ecommerce-icon-Graphics-4123404-1.jpg",
+            "tags": ["React", "Node.js", "MongoDB"]
+        },
+        {
+            "title": "NAPR (iOS App)",
+            "sub": "Noida Authority Pet Registration",
+            "description": "Developed the iOS app using Swift 5 and REST APIs. Features include user registration with OTP, pet registration with image upload and fee payment, certificate issuance by Noida Authority, complaint submission, and certificate renewal. The app simplifies pet registration for Noida residents via mobile.",
+            "image": "https://image.winudf.com/v2/image1/MjEwODQ3MDBfMTY5NTkzMjI3MV8wODY/screen-0.png?fakeurl=1&type=png&w=292",
+            "tags": ["Swift 5", "Spring boot", "PostgreSQL"]
+        },
+        {
+            "title": "LMS",
+            "sub": "Loan Management System",
+            "description": "Worked on a large-scale, customizable NBFC software designed to manage the complete loan lifecycle. It enables quick deployment of custom loan products and automates business processes for higher efficiency. Over 1000+ pages developed within the first week. Features a unique, user-friendly UI and seamless UX.",
+            "image": "https://www.leadsquared.com/wp-content/uploads/2021/11/Digital-Loan-Management-System.jpg",
+            "tags": ["Angular", "Node.js", "MySQL"]
+        },
+        {
+            "title": "Optum UHG",
+            "sub": "Specialty Provider Portal",
+            "description": "Working on Optum’s medication management web app for tracking prescriptions, doctor consultations, clinic and pharmacy management, and live chat support. Responsible for frontend development using Next.js and TypeScript, unit testing with Jest, CMS integration (Drupal), GitHub, Jenkins, Rally for task management, and GraphQL/MySQL/Azure for backend services.",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReorV24O7dea4_6MvX4bJroOajPptmH6s5kg&s",
+            "tags": ["Next.js", "TypeScript", "MySQL", "Spring boot", "GraphQL", "DevOps", "Jenkins", "Azure"]
+        },
+        {
+            "title": "Libera",
+            "sub": "VR Case Management Software",
+            "description": "Working on Libera’s inFormed platform—an all-in-one, mobile-friendly case management system tailored for Vocational Rehab and Pre-ETS programs. It offers workflow automation, real-time service tracking, advanced analytics, and compliance with federal standards, ensuring efficient, secure, and high-performing outcomes.",
+            "image": "https://i.vimeocdn.com/video/1901426684-9bcdee4da1f2c8e086625b2301aac1b10c83dac2ecf80a0efd022c67e94d4762-d?f=webp",
+            "tags": ["Angular", "MongoDB", "Express.js", "Node.js", "DevOps", "AWS", "Docker"]
+        }
+    ]
