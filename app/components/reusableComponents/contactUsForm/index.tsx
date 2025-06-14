@@ -60,11 +60,16 @@ const ContactUsForm = () => {
     <Box sx={{ backgroundColor: theme.palette.background.paper }}>
       <Container sx={{ ...sx.footerSection }}>
         <Box sx={{ mx: 4 }}>
-          <Typography variant="h6">
+          <Typography
+            variant="h6"
+            sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, textAlign: "center" }}
+          >
             Open to new opportunities, collaborations, and interesting projects.
             Feel free to connect!
           </Typography>
-          <Box sx={{ display: "flex", gap: 2, marginTop: 2 }}>
+          <Box
+            sx={{ display: { xs: "block", md: "flex" }, gap: 2, marginTop: 2 }}
+          >
             <Button
               variant="contained"
               href="mailto:harrusingh81@gmail.com"
@@ -77,6 +82,7 @@ const ContactUsForm = () => {
                 "&:hover": {
                   backgroundColor: "#FF7F00",
                 },
+                width: { xs: "100%" },
               }}
               startIcon={<EmailIcon />}
             >
@@ -93,6 +99,8 @@ const ContactUsForm = () => {
                 "&:hover": {
                   backgroundColor: "#005582",
                 },
+                width: { xs: "100%" },
+                mt: { xs: 2, md: 0 },
               }}
               href="https://www.linkedin.com/in/harsh-singh10352/"
               startIcon={<LinkedInIcon />}
@@ -111,6 +119,8 @@ const ContactUsForm = () => {
                 "&:hover": {
                   backgroundColor: "#222",
                 },
+                width: { xs: "100%" },
+                mt: { xs: 2, md: 0 },
               }}
               startIcon={<GitHubIcon />}
             >
@@ -128,6 +138,8 @@ const ContactUsForm = () => {
                 "&:hover": {
                   backgroundColor: "#C13584",
                 },
+                width: { xs: "100%" },
+                mt: { xs: 2, md: 0 },
               }}
               startIcon={<InstagramIcon />}
             >
