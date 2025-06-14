@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
         }}
       >
         <Typography
-          variant="h3"
+          variant="h4"
           sx={{
             fontWeight: 700,
             mb: 6,
@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
             flexWrap: "wrap",
             gap: { xs: 2, lg: 4 },
             mt: 6,
-            justifyContent: "flex-start",
+            justifyContent: "space-evenly",
           }}
         >
           {skills.map((skill, idx) => {

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -16,6 +17,7 @@
     "@mui/material": "^7.1.0",
     "@mui/material-nextjs": "^7.1.0",
     "@mui/styles": "^6.4.11",
+    "axios": "^1.9.0",
     "framer-motion": "^11.18.2",
     "next": "15.3.2",
     "ogl": "^1.0.11",
