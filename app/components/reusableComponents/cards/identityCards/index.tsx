@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import styleConstants from "@/app/theme/styleConstants";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const styles = () => {
   const { fontSizes, colorPalette } = styleConstants;
@@ -63,6 +64,13 @@ const styles = () => {
 
 const IdentityCard = () => {
   const sx = styles();
+  const router = useRouter();
+  // Uncomment the following line if you are using Next.js routing
+
+  const handleRoute = () => {
+    // Implement routing logic here
+    router.push("/portfolio");
+  };
   return (
     <Card sx={sx.card}>
       <Box sx={sx.headerBox}>
@@ -124,7 +132,11 @@ const IdentityCard = () => {
         </Box>
       </CardContent>
       <CardActions sx={{ px: 2, pb: 2 }}>
-        <Button variant="contained" sx={sx.button}>
+        <Button
+          variant="contained"
+          sx={sx.button}
+          onClick={() => handleRoute()}
+        >
           view
         </Button>
       </CardActions>
