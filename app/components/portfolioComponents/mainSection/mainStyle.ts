@@ -126,7 +126,7 @@ export const styles = (theme: any) => {
       },
     },
     footerSection: {
-      display: "flex",
+      display: { xs: "block", md: "flex" },
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",

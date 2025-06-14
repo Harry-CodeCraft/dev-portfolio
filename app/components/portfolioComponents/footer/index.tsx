@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
         padding: "1rem",
         backgroundColor: theme.palette.background.paper,
         color: theme.palette.text.primary,
+        mb: { xs: 6 },
       }}
     >
       <Typography variant="body2">
