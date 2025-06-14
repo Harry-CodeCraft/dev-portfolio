@@ -7,9 +7,9 @@ import expJson from "@/mock/experience.json";
 import eduJson from "@/mock/education.json";
 import Skills from "@/app/components/portfolioComponents/skills/skills";
 import { useTheme } from "@mui/material";
-import ProjectsSection from "@/app/components/portfolioComponents/projectsSection";
 import ContactUsForm from "@/app/components/reusableComponents/contactUsForm";
 import Footer from "@/app/components/portfolioComponents/footer";
+import Projects from "@/app/components/portfolioComponents/projects";
 
 export default function PortfolioPage() {
   const theme = useTheme();
@@ -23,7 +23,7 @@ export default function PortfolioPage() {
       />
       <TimelineSection jsonData={eduJson} heading="Education" theme={theme} />
       <Skills />
-      <ProjectsSection />
+      <Projects />
       <ContactUsForm />
       <Footer />
     </>
