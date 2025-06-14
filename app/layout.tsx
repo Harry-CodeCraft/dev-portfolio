@@ -67,7 +67,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const { publicRuntimeConfig } = getConfig();
-
   return (
     <html lang="en">
       <head>

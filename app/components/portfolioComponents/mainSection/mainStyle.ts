@@ -4,7 +4,7 @@ import styleConstants from "@/app/theme/styleConstants";
 export const styles = (theme: any) => {
   const isDark = theme.palette.mode === "dark";
   const { fontSizes } = styleConstants;
-  const { primary } = theme.palette;
+  const { primary, background } = theme.palette;
 
   return {
     name: {
@@ -123,6 +123,37 @@ export const styles = (theme: any) => {
           transform: "translateX(6px) scale(1.2)",
           opacity: 1,
         },
+      },
+    },
+    footerSection: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    contactUsForm: {
+      width: "100%",
+      maxWidth: 600,
+      margin: "30px 0px",
+      padding: 4,
+      borderRadius: 2,
+      backgroundColor: isDark ? background.paper : "#f5f5f5",
+      boxShadow:
+        "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+      border: `1px solid ${
+        isDark ? theme.palette.primary.main : theme.palette.primary.light
+      }`,
+    },
+    fieldSetting: {
+      "& .MuiInputBase-root": {
+        "& .MuiInputBase-input": {
+          padding: "10px 10px", // Adjust padding
+          fontSize: "0.9rem", // Adjust font size
+        },
+      },
+      "& .MuiInputLabel-root": {
+        fontSize: "1rem", // Adjust label font size
+        top: "-8px", // Adjust label position
       },
     },
   };

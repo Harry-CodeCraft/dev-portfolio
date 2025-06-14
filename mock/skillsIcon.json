@@ -35,6 +35,18 @@
   {
     "name": "ChatGPT API",
     "iconUrl":
-      "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+    "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+  },
+  {
+    "name": "Swift",
+    "iconClass": "devicon-swift-plain colored"
+  },
+  {
+    "name": "Docker",
+    "iconClass": "devicon-docker-plain colored"
+  },
+  {
+    "name": "Linux",
+    "iconClass": "devicon-linux-plain colored"
   }
 ]

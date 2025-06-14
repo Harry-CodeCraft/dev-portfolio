@@ -14,7 +14,7 @@ export interface ISocialMediaIcon {
 export const socialMediaIconArray: ISocialMediaIcon[] = [
   {
     icon: <MailOutlineIcon fontSize="large" />,
-    href: "mailto:harsh10352@gmail.com",
+    href: "mailto:harrusingh81@gmail.com",
     label: "Email",
   },
   {
