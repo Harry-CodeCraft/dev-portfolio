@@ -19,7 +19,7 @@ const SocialMediaIcons = memo(() => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          bgcolor: "rgba(36, 44, 62, 0.7)",
+          bgcolor: "#242c3e",
           borderRadius: "48px",
           boxShadow: "0 2px 16px 0 rgba(0,0,0,0.12)",
           border: "2px solid rgba(255,255,255,0.08)",

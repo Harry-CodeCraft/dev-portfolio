@@ -162,7 +162,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
             width: "4px",
             height: "calc(100% - 24px)",
             bgcolor:
-              theme.palette.mode === "dark" ? primary.light : "orange.400",
+              theme.palette.mode === "dark" ? primary.light : primary.main,
             borderRadius: 2,
             zIndex: 0,
           }}

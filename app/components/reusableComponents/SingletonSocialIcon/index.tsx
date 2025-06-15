@@ -1,12 +1,14 @@
 "use client";
 
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useEffect, useState, memo } from "react";
 import styleConstants from "@/app/theme/styleConstants";
 import { ISocialMediaIcon, socialMediaIconArray } from "../icons";
 
 const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
   const { fontSizes, colorPalette } = styleConstants;
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const [iconsArrayCopy, setIconsArrayCopy] = useState<ISocialMediaIcon[]>([]);
 
   useEffect(() => {
@@ -29,7 +31,7 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          bgcolor: "rgba(36, 44, 62, 0.7)",
+          bgcolor: "#242c3e",
           borderRadius: "48px",
           boxShadow: "0 2px 16px 0 rgba(0,0,0,0.12)",
           border: "2px solid rgba(255,255,255,0.08)",
@@ -72,13 +74,17 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
             </IconButton>
             {iconsArrayCopy.length === 1 && (
               <span style={{ textAlign: "left" }}>
-                <span>@HarryCodeCraft</span>
+                <span style={{ color: colorPalette.offWhite }}>
+                  @HarryCodeCraft
+                </span>
                 <br />
                 <Typography
                   style={{
                     fontSize: fontSizes.xtiny,
                     lineHeight: 1,
-                    color: colorPalette.platinumWhite80,
+                    color: isDark
+                      ? theme.palette.text.secondary
+                      : colorPalette.platinumWhite80,
                     paddingLeft: "0.5rem",
                     paddingRight: "0.5rem",
                   }}

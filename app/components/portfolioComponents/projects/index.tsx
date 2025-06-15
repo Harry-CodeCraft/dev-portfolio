@@ -54,11 +54,13 @@ const ProjectCard = () => {
 const StyledCard = styled(Box)(({ theme }) => ({
   width: "350px",
   transition: "transform 0.3s, box-shadow 0.3s",
-  backgroundColor: "#23283b",
+  backgroundColor: theme.palette.background.paper,
   borderRadius: "16px",
   padding: "16px",
   boxShadow:
-    "0 0 12px 0px rgb(0 102 255 / 40%), 0 0 20px 5px rgb(0 102 255 / 10%)",
+    theme.palette.mode === "dark"
+      ? "0 0 12px 0px rgb(0 102 255 / 40%), 0 0 20px 5px rgb(0 102 255 / 10%)"
+      : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
   "&:hover": {
     transform: "scale(1.08)",
     boxShadow:
@@ -82,7 +84,7 @@ const StyledCard = styled(Box)(({ theme }) => ({
   },
   ".card__content": {
     textAlign: "left",
-    color: "#fff",
+    color: theme.palette.text.primary,
   },
   ".card__title": {
     fontWeight: 700,
