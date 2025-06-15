@@ -1,6 +1,7 @@
 "use client";
 
 import { Box } from "@mui/material";
+
 import Cards from "./components/reusableComponents/cards";
 
 const cards = [{ id: 2, type: "Identity Card" }];

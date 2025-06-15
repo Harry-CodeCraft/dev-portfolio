@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useMemo } from "react";
 import { Box, Typography, useTheme, Paper, Avatar } from "@mui/material";
 import { motion } from "framer-motion";
+import React, { useMemo } from "react";
 import { useInView } from "react-intersection-observer";
-import skills from "@/mock/skillsIcon.json"; // Assuming skills.json is in the mock folder
+
 import { skillsStyles } from "./skillsStyle";
+import skills from "@/mock/skillsIcon.json"; // Assuming skills.json is in the mock folder
 
 const Skills: React.FC = () => {
   const theme = useTheme();

@@ -1,15 +1,16 @@
 "use client";
 
-import React from "react";
-import MainSection from "@/app/components/portfolioComponents/mainSection/mainSection";
-import TimelineSection from "@/app/components/portfolioComponents/timelineSection";
-import expJson from "@/mock/experience.json";
-import eduJson from "@/mock/education.json";
-import Skills from "@/app/components/portfolioComponents/skills/skills";
 import { useTheme } from "@mui/material";
-import ContactUsForm from "@/app/components/reusableComponents/contactUsForm";
+import React from "react";
+
 import Footer from "@/app/components/portfolioComponents/footer";
+import MainSection from "@/app/components/portfolioComponents/mainSection/mainSection";
 import Projects from "@/app/components/portfolioComponents/projects";
+import Skills from "@/app/components/portfolioComponents/skills/skills";
+import TimelineSection from "@/app/components/portfolioComponents/timelineSection";
+import ContactUsForm from "@/app/components/reusableComponents/contactUsForm";
+import eduJson from "@/mock/education.json";
+import expJson from "@/mock/experience.json";
 
 export default function PortfolioPage() {
   const theme = useTheme();

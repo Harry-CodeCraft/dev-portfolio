@@ -1,4 +1,8 @@
-import React, { useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   TextField,
   Button,
@@ -8,12 +12,9 @@ import {
   useTheme,
   CircularProgress,
 } from "@mui/material";
+import React, { useMemo, useState } from "react";
+
 import { styles } from "../../portfolioComponents/mainSection/mainStyle";
-import emailjs from "@emailjs/browser";
-import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 const ContactUsForm = () => {
   const theme = useTheme();

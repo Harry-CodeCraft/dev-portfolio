@@ -2,7 +2,7 @@
 
 import "./main.css";
 
-import { useEffect, useMemo, useState } from "react";
+import { Download } from "@mui/icons-material";
 import {
   Box,
   Typography,
@@ -13,10 +13,11 @@ import {
   Container,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Download } from "@mui/icons-material";
-import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
-import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon";
+import { useEffect, useMemo, useState } from "react";
+
 import { styles } from "@/app/components/portfolioComponents/mainSection/mainStyle";
+import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon";
+import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
 
 // Only styled for the root container
 const Root = styled(Box)(({ theme }) => ({

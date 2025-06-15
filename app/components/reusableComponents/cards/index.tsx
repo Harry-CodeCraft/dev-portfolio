@@ -1,9 +1,10 @@
 "use client";
 
 import { Box } from "@mui/material";
+
+import ClashCard from "./clashCard";
 import HoverDynamicCard from "./hoveDynamicCard";
 import IdentityCard from "./identityCards";
-import ClashCard from "./clashCard";
 
 const cards = [
   { name: "Hover Dynamic Card", component: <HoverDynamicCard /> },

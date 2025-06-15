@@ -1,6 +1,6 @@
 "use client";
-import React, { memo, useEffect, useRef, useState } from "react";
 import { Box, Typography, List, ListItem, Theme } from "@mui/material";
+import React, { memo, useEffect, useRef, useState } from "react";
 
 interface ExperienceItem {
   date: string;

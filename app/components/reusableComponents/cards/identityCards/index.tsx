@@ -1,14 +1,15 @@
-import React from "react";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
 import Typography from "@mui/material/Typography";
-import styleConstants from "@/app/theme/styleConstants";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import React from "react";
+
+import styleConstants from "@/app/theme/styleConstants";
 
 const styles = () => {
   const { fontSizes, colorPalette } = styleConstants;

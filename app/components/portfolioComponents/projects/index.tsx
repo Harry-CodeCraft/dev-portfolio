@@ -1,5 +1,7 @@
-import React, { memo } from "react";
 import { Box, Typography, Chip, styled, Container } from "@mui/material";
+import Image from "next/image";
+import React, { memo } from "react";
+
 import projects from "@/mock/projects.json"; // Assuming projects.json is in the mock folder
 
 const ProjectCard = () => {
@@ -26,7 +28,14 @@ const ProjectCard = () => {
         {projects.map((project, index) => (
           <StyledCard key={index}>
             <Box className="card__image">
-              <img src={project.image} alt={project.title} className="image" />
+              <Image
+                src={project.image}
+                alt={project.title}
+                className="image"
+                layout="responsive"
+                width={350}
+                height={180}
+              />
             </Box>
             <Box className="card__content">
               <Typography variant="h5" className="card__title">

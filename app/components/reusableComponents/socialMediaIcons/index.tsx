@@ -1,8 +1,9 @@
 "use client";
 
 import { Box, IconButton } from "@mui/material";
-import { socialMediaIconArray } from "../icons";
 import { memo } from "react";
+
+import { socialMediaIconArray } from "../icons";
 
 const SocialMediaIcons = memo(() => {
   const icons = socialMediaIconArray;

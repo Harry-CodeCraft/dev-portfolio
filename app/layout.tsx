@@ -1,11 +1,12 @@
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
+import getConfig from "next/config";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { StyledRoot } from "./theme/styledRoot";
+
 import ComingSoon from "./components/comingSoon";
-import getConfig from "next/config";
-import { Analytics } from "@vercel/analytics/next";
+import { StyledRoot } from "./theme/styledRoot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+
 import styleConstants from "./styleConstants";
 
 const { colorPalette } = styleConstants;
