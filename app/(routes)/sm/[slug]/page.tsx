@@ -1,5 +1,6 @@
 "use client";
 
+import { CircularProgress } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -36,17 +37,15 @@ const LandingPage = () => {
   }, [browserInfo]);
 
   return (
-    <div>
-      <h1>Landing Page</h1>
-      <p>Browser Info:</p>
-      <ul>
-        <li>App Name: {browserInfo.appName}</li>
-        <li>App Version: {browserInfo.appVersion}</li>
-        <li>Platform: {browserInfo.platform}</li>
-        <li>User Agent: {browserInfo.userAgent}</li>
-        <li>Language: {browserInfo.language}</li>
-      </ul>
-      <p>Generated URL:</p>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <CircularProgress size={50} color="inherit" />
     </div>
   );
 };
