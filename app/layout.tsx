@@ -5,6 +5,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { StyledRoot } from "./theme/styledRoot";
 import ComingSoon from "./components/comingSoon";
 import getConfig from "next/config";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,7 +81,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           {!publicRuntimeConfig.enableComingSoon ? (
-            <StyledRoot>{children}</StyledRoot>
+            <StyledRoot>
+              {children}
+              <Analytics />
+            </StyledRoot>
           ) : (
             <ComingSoon />
           )}
