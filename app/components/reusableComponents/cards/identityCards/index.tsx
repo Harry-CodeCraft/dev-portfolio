@@ -138,7 +138,7 @@ const IdentityCard = () => {
           sx={sx.button}
           onClick={() => handleRoute()}
         >
-          view
+          View Portfolio
         </Button>
       </CardActions>
     </Card>
