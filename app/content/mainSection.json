@@ -1,0 +1,17 @@
+{
+  "mainSection": {
+    "name": "Harsh Singh",
+    "titles": [
+      "Software Developer",
+      "Software Engineer",
+      "Tech Blogger",
+      "Dev Content Creator"
+    ],
+    "fullTimePrefix": "Full-time ",
+    "whoAmI": "whoAmI()",
+    "openBrace": "{",
+    "closeBrace": "}",
+    "description": "I’m a Full Stack Software Developer with 3+ years of experience building scalable web apps, optimizing microservices, and leading teams. Skilled in CI/CD, cloud infrastructure, testing, and system design. Passionate about problem-solving, writing clean code, and continuous learning to stay ahead in tech. Also a tech enthusiast and dev content creator.",
+    "resumeLabel": "Résumé"
+  }
+}

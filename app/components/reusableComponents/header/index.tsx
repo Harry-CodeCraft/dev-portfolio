@@ -1,6 +1,5 @@
 "use client";
 
-
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { AppBar, Toolbar, Button, Box } from "@mui/material";
@@ -10,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 
+import content from "@/app/content/siteContent";
 import styleConstants from "@/app/theme/styleConstants";
 
 interface HeaderProps {
@@ -17,10 +17,15 @@ interface HeaderProps {
   toggleMode: () => void;
 }
 
-const navLinks = [
-  { label: "Home", href: "/", icon: <GoHomeFill size={25} /> },
-  { label: "Portfolio", href: "/portfolio", icon: <FaUserCircle size={25} /> },
-];
+const navLinks = content.header.navLinks.map((link) => ({
+  ...link,
+  icon:
+    link.label === "Home" ? (
+      <GoHomeFill size={25} />
+    ) : (
+      <FaUserCircle size={25} />
+    ),
+}));
 
 function handleNavigation(href: string, router: AppRouterInstance) {
   router.push(href);
@@ -49,8 +54,8 @@ export default function Header({ mode, toggleMode }: HeaderProps) {
           mode === "light"
             ? colorPalette.darkCharcoal
             : elevated
-            ? colorPalette.platinumWhite
-            : colorPalette.offWhite,
+              ? colorPalette.platinumWhite
+              : colorPalette.offWhite,
 
         bottom: { xs: 0, md: "auto" },
         top: { xs: "auto", md: 0 },

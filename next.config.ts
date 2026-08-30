@@ -46,9 +46,11 @@ const nextConfig: NextConfig = {
     enableComingSoon: process.env.ENABLE_COMING_SOON === "true",
     emailJs: {
       publicKey: process.env.EMAILJS_PUBLIC_KEY || "",
-      serviceId: process.env.EMAILJS_SERVICE_ID || "",
-      templateId: process.env.EMAILJS_TEMPLATE_ID || "",
+      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+      userId: process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "",
     },
+    profilePicturelinkedIn: process.env.LINKEDIN_PROFILE_PIC,
   },
 };
 

@@ -2,7 +2,8 @@ import { Box, Typography, Chip, styled, Container } from "@mui/material";
 import Image from "next/image";
 import React, { memo } from "react";
 
-import projects from "@/mock/projects.json"; // Assuming projects.json is in the mock folder
+import content from "@/app/content/siteContent";
+import projects from "@/mock/projects.json";
 
 const ProjectCard = () => {
   return (
@@ -15,7 +16,7 @@ const ProjectCard = () => {
           textAlign: "left",
         }}
       >
-        Projects
+        {content.portfolio.title}
       </Typography>
       <Box
         sx={{

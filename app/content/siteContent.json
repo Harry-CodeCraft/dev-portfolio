@@ -1,0 +1,60 @@
+{
+  "mainSection": {
+    "name": "Harsh Singh",
+    "titles": [
+      "Software Developer",
+      "Software Engineer",
+      "Tech Blogger",
+      "Dev Content Creator"
+    ],
+    "fullTimePrefix": "Full-time ",
+    "whoAmI": "whoAmI()",
+    "openBrace": "{",
+    "closeBrace": "}",
+    "description": "I’m a Full Stack Software Developer with 3+ years of experience building scalable web apps, optimizing microservices, and leading teams. Skilled in CI/CD, cloud infrastructure, testing, and system design. Passionate about problem-solving, writing clean code, and continuous learning to stay ahead in tech. Also a tech enthusiast and dev content creator.",
+    "resumeLabel": "Résumé"
+  },
+  "header": {
+    "navLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "Portfolio", "href": "/portfolio" }
+    ]
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "disclaimer": "Disclaimer: The information provided on this website is for general informational purposes only.",
+    "gdpr": "This site complies with GDPR regulations. By using this site, you consent to the use of cookies and data collection as outlined in our privacy policy."
+  },
+  "socialMedia": {
+    "items": [
+      { "label": "Email", "href": "mailto:harrusingh81@gmail.com" },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/harsh-singh10352/"
+      },
+      { "label": "GitHub", "href": "https://github.com/Harry-CodeCraft" },
+      { "label": "Facebook", "href": "https://facebook.com/yourprofile" },
+      { "label": "Instagram", "href": "https://instagram.com/harrycodecraft" }
+    ],
+    "instagramProfile": {
+      "handle": "@HarryCodeCraft",
+      "description": "This is my professional Instagram account, where I share daily coding updates, tech news, and developer tips."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Open to new opportunities, collaborations, and interesting projects. Feel free to connect!",
+    "formTitle": "Contact Us",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "successMessage": "Email sent successfully"
+  },
+  "portfolio": {
+    "title": "Projects"
+  }
+}

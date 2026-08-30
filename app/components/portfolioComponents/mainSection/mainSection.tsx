@@ -1,7 +1,5 @@
 "use client";
 
-import "./main.css";
-
 import { Download } from "@mui/icons-material";
 import {
   Box,
@@ -18,6 +16,8 @@ import { useEffect, useMemo, useState } from "react";
 import { styles } from "@/app/components/portfolioComponents/mainSection/mainStyle";
 import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon";
 import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
+import env from "@/app/config/env";
+import content from "@/app/content";
 
 // Only styled for the root container
 const Root = styled(Box)(({ theme }) => ({
@@ -28,15 +28,21 @@ const Root = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-const titles = [
-  "Software Developer",
-  "Software Engineer",
-  "Tech Blogger",
-  "Dev Content Creator",
-];
+const { mainSection } = content;
+const {
+  titles,
+  name,
+  description,
+  resumeLabel,
+  fullTimePrefix,
+  whoAmI,
+  openBrace,
+  closeBrace,
+} = mainSection;
 
 const MainSection = () => {
   const theme = useTheme();
+  const { linkedInProfilePic } = env;
   const sx = useMemo(() => styles(theme), [theme]);
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
@@ -71,13 +77,14 @@ const MainSection = () => {
           {/* Left Column: Name & Info */}
           <Grid width={{ xs: "100%", md: "30%" }} textAlign="center">
             <Typography variant="h3" component="h1" gutterBottom sx={sx.name}>
-              Harsh Singh
+              {name}
             </Typography>
             <Typography
               sx={sx.title}
               style={{ minHeight: "2.5rem", fontFamily: "monospace" }}
             >
-              Full-time {displayed}
+              {fullTimePrefix}
+              {displayed}
               <span className="blink-cursor" style={sx.subheadingName} />
             </Typography>
             <SocialMediaIcons />
@@ -111,7 +118,7 @@ const MainSection = () => {
                 <Box sx={sx.innerBackAvtaar}>
                   <Avatar
                     alt="Harsh Singh Alt"
-                    src="https://media.licdn.com/dms/image/v2/D5603AQHM2HMhGI8iXw/profile-displayphoto-shrink_400_400/B56ZbFqxv2GsAo-/0/1747073049679?e=1753920000&v=beta&t=lKhbnci7cqdnhuqnnpIQcBdpeRciKS2oq_N9tccUvnw"
+                    src={linkedInProfilePic}
                     sx={{
                       ...sx.avatar,
                       height: { xs: "100%", md: "300px", lg: "350px" },
@@ -127,16 +134,14 @@ const MainSection = () => {
             textAlign="center"
             position="relative"
           >
-            <Typography sx={sx.descCoverStart}>whoAmI()&#123;</Typography>
-            <Typography variant="body1" sx={sx.description}>
-              I’m a Full Stack Software Developer with 3+ years of experience
-              building scalable web apps, optimizing microservices, and leading
-              teams. Skilled in CI/CD, cloud infrastructure, testing, and system
-              design. Passionate about problem-solving, writing clean code, and
-              continuous learning to stay ahead in tech. Also a tech enthusiast
-              and dev content creator.
+            <Typography sx={sx.descCoverStart}>
+              {whoAmI}
+              {openBrace}
             </Typography>
-            <Typography sx={sx.descCoverEnd}>&#125;</Typography>
+            <Typography variant="body1" sx={sx.description}>
+              {description}
+            </Typography>
+            <Typography sx={sx.descCoverEnd}>{closeBrace}</Typography>
             <Box
               sx={{
                 textAlign: { xs: "center", md: "left" },
@@ -164,7 +169,7 @@ const MainSection = () => {
                     />
                   }
                 >
-                  Résumé
+                  {resumeLabel}
                 </Button>
               </a>
             </Box>

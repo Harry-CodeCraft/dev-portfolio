@@ -15,6 +15,8 @@ import {
 import React, { useMemo, useState } from "react";
 
 import { styles } from "../../portfolioComponents/mainSection/mainStyle";
+import env from "@/app/config/env";
+import content from "@/app/content/siteContent";
 
 const ContactUsForm = () => {
   const theme = useTheme();
@@ -28,26 +30,26 @@ const ContactUsForm = () => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  const { userId, templateId, serviceId } = env.emailJs;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        serviceId!,
+        templateId!,
         {
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+        userId!,
       );
       alert("Email sent successfully");
     } catch (error) {
@@ -68,7 +70,7 @@ const ContactUsForm = () => {
           textAlign: "center",
         }}
       >
-        Get in Touch
+        {content.contact.title}
       </Typography>
       <Container sx={{ ...sx.footerSection }}>
         <Box sx={{ mx: 4 }}>
@@ -76,8 +78,7 @@ const ContactUsForm = () => {
             variant="h6"
             sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, textAlign: "center" }}
           >
-            Open to new opportunities, collaborations, and interesting projects.
-            Feel free to connect!
+            {content.contact.intro}
           </Typography>
           <Box
             sx={{ display: { xs: "block", md: "flex" }, gap: 2, marginTop: 2 }}
@@ -161,10 +162,10 @@ const ContactUsForm = () => {
         </Box>
         <Box component="form" onSubmit={handleSubmit} sx={sx.contactUsForm}>
           <Typography variant="h6" sx={{ fontWeight: 700 }}>
-            Contact Us
+            {content.contact.formTitle}
           </Typography>
           <TextField
-            label="Name"
+            label={content.contact.fields.name}
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -174,7 +175,7 @@ const ContactUsForm = () => {
             sx={sx.fieldSetting}
           />
           <TextField
-            label="Email"
+            label={content.contact.fields.email}
             name="email"
             type="email"
             value={formData.email}
@@ -185,7 +186,7 @@ const ContactUsForm = () => {
             sx={sx.fieldSetting}
           />
           <TextField
-            label="Subject"
+            label={content.contact.fields.subject}
             name="subject"
             value={formData.subject}
             onChange={handleChange}
@@ -195,7 +196,7 @@ const ContactUsForm = () => {
             sx={sx.fieldSetting}
           />
           <TextField
-            label="Message"
+            label={content.contact.fields.message}
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -215,7 +216,7 @@ const ContactUsForm = () => {
             {loading ? (
               <CircularProgress size={24} color="inherit" />
             ) : (
-              "Submit"
+              content.contact.fields.submit
             )}
           </Button>
         </Box>
