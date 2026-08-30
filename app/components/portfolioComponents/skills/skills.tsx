@@ -5,12 +5,15 @@ import { motion } from "framer-motion";
 import React, { useMemo } from "react";
 import { useInView } from "react-intersection-observer";
 
+import fallbackContent from "@/app/content/siteContent.json";
 import { skillsStyles } from "./skillsStyle";
-import skills from "@/mock/skillsIcon.json"; // Assuming skills.json is in the mock folder
 
-const Skills: React.FC = () => {
+const Skills: React.FC<{
+  content?: (typeof fallbackContent)["skills"];
+}> = ({ content }) => {
   const theme = useTheme();
   const sx = useMemo(() => skillsStyles(theme), [theme]);
+  const skills = content?.items ?? fallbackContent.skills.items;
 
   const [sectionRef, inView] = useInView({ threshold: 0.2 });
 
@@ -32,7 +35,7 @@ const Skills: React.FC = () => {
             textAlign: "left",
           }}
         >
-          Skills
+          {content?.title ?? fallbackContent.skills.title}
         </Typography>
 
         <Box

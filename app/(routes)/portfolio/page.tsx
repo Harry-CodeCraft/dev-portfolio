@@ -9,22 +9,28 @@ import Projects from "@/app/components/portfolioComponents/projects";
 import Skills from "@/app/components/portfolioComponents/skills/skills";
 import TimelineSection from "@/app/components/portfolioComponents/timelineSection";
 import ContactUsForm from "@/app/components/reusableComponents/contactUsForm";
-import eduJson from "@/mock/education.json";
-import expJson from "@/mock/experience.json";
+import { useSiteContent } from "@/app/context/siteContentContext";
 
 export default function PortfolioPage() {
   const theme = useTheme();
+  const content = useSiteContent();
+
   return (
     <>
-      <MainSection />
+      <MainSection content={content.mainSection} />
       <TimelineSection
-        jsonData={expJson}
-        heading="My Work Experience"
+        jsonData={content.workExperience.items}
+        heading={content.workExperience.title}
         theme={theme}
       />
-      <TimelineSection jsonData={eduJson} heading="Education" theme={theme} />
-      <Skills />
-      <Projects />
+      <br />
+      <TimelineSection
+        jsonData={content.personalDevExp.items}
+        heading={content.personalDevExp.title}
+        theme={theme}
+      />
+      <Skills content={content.skills} />
+      <Projects content={content.projects} />
       <ContactUsForm />
       <Footer />
     </>

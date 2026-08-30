@@ -8,6 +8,7 @@ export const styles = (theme: any) => {
 
   return {
     name: {
+      color: isDark ? theme.palette.primary.main : theme.palette.primary.light,
       fontWeight: 700,
       fontSize: { xs: fontSizes.xxLarge, md: fontSizes.huge },
       textAlign: { xs: "center", md: "left" },

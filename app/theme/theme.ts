@@ -15,7 +15,7 @@ const getTheme = (mode: "light" | "dark") =>
               light: colorPalette.vibrantBlue,
             }, // custom light primary
             secondary: { main: colorPalette.azure },
-            background: { default: colorPalette.offWhite, paper: "#fff" },
+            background: { default: colorPalette.offWhite, paper: "#f0f0f0" },
             text: {
               primary: colorPalette.justBlack,
               secondary: colorPalette.darkCharcoal,

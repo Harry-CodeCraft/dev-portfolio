@@ -1,4 +1,4 @@
-import mainSectionContent from "./mainSection.json";
+import mainSectionContent from "./siteContent.json";
 
 export const content = {
   mainSection: mainSectionContent.mainSection,

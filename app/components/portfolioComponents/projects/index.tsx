@@ -2,10 +2,15 @@ import { Box, Typography, Chip, styled, Container } from "@mui/material";
 import Image from "next/image";
 import React, { memo } from "react";
 
-import content from "@/app/content/siteContent";
-import projects from "@/mock/projects.json";
+import fallbackContent from "@/app/content/siteContent.json";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  content,
+}: {
+  content?: (typeof fallbackContent)["projects"];
+}) => {
+  const projects = content?.items ?? fallbackContent.projects.items;
+
   return (
     <Container>
       <Typography
@@ -16,7 +21,7 @@ const ProjectCard = () => {
           textAlign: "left",
         }}
       >
-        {content.portfolio.title}
+        {content?.title ?? fallbackContent.portfolio.title}
       </Typography>
       <Box
         sx={{

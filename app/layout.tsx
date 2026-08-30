@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import ComingSoon from "./components/comingSoon";
+import { SiteContentProvider } from "./context/siteContentContext";
 import { StyledRoot } from "./theme/styledRoot";
 
 const geistSans = Geist({
@@ -82,10 +83,12 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           {!publicRuntimeConfig.enableComingSoon ? (
-            <StyledRoot>
-              {children}
-              <Analytics />
-            </StyledRoot>
+            <SiteContentProvider>
+              <StyledRoot>
+                {children}
+                <Analytics />
+              </StyledRoot>
+            </SiteContentProvider>
           ) : (
             <ComingSoon />
           )}

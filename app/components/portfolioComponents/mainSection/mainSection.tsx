@@ -1,6 +1,6 @@
 "use client";
 
-import { Download } from "@mui/icons-material";
+import { ReadMore } from "@mui/icons-material";
 import {
   Box,
   Typography,
@@ -17,7 +17,7 @@ import { styles } from "@/app/components/portfolioComponents/mainSection/mainSty
 import SingletonSocialIcon from "@/app/components/reusableComponents/SingletonSocialIcon";
 import SocialMediaIcons from "@/app/components/reusableComponents/socialMediaIcons";
 import env from "@/app/config/env";
-import content from "@/app/content";
+import defaultContent from "@/app/content";
 
 // Only styled for the root container
 const Root = styled(Box)(({ theme }) => ({
@@ -28,19 +28,20 @@ const Root = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-const { mainSection } = content;
-const {
-  titles,
-  name,
-  description,
-  resumeLabel,
-  fullTimePrefix,
-  whoAmI,
-  openBrace,
-  closeBrace,
-} = mainSection;
+const { mainSection: defaultMainSection } = defaultContent;
 
-const MainSection = () => {
+const MainSection = ({ content }: { content?: typeof defaultMainSection }) => {
+  const mainSection = content ?? defaultMainSection;
+  const {
+    titles,
+    name,
+    description,
+    readMore,
+    fullTimePrefix,
+    whoAmI,
+    openBrace,
+    closeBrace,
+  } = mainSection;
   const theme = useTheme();
   const { linkedInProfilePic } = env;
   const sx = useMemo(() => styles(theme), [theme]);
@@ -160,7 +161,7 @@ const MainSection = () => {
                   variant="outlined"
                   sx={sx.resumeButton}
                   endIcon={
-                    <Download
+                    <ReadMore
                       className="download-icon"
                       sx={{
                         transition: "transform 0.3s, opacity 0.3s",
@@ -169,7 +170,7 @@ const MainSection = () => {
                     />
                   }
                 >
-                  {resumeLabel}
+                  {readMore}
                 </Button>
               </a>
             </Box>

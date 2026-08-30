@@ -1,11 +1,13 @@
 "use client";
 
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, useTheme } from "@mui/material";
 import { memo } from "react";
 
 import { socialMediaIconArray } from "../icons";
 
 const SocialMediaIcons = memo(() => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const icons = socialMediaIconArray;
 
   return (
@@ -20,10 +22,12 @@ const SocialMediaIcons = memo(() => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          bgcolor: "#242c3e",
+          bgcolor: isDark ? "#1d2433" : "#f3f5f8",
           borderRadius: "48px",
           boxShadow: "0 2px 16px 0 rgba(0,0,0,0.12)",
-          border: "2px solid rgba(255,255,255,0.08)",
+          border: isDark
+            ? "2px solid rgba(255,255,255,0.08)"
+            : "2px solid rgba(0,0,0,0.06)",
           backdropFilter: "blur(2px)",
           width: "286px",
           py: 1.1,
@@ -38,8 +42,12 @@ const SocialMediaIcons = memo(() => {
             rel="noopener noreferrer"
             aria-label={label}
             sx={{
-              border: "2px solid rgba(255,255,255,0.25)",
-              color: "#e7e8e9",
+              border: isDark
+                ? "2px solid rgba(255,255,255,0.2)"
+                : "2px solid rgba(0,0,0,0.12)",
+              color: isDark
+                ? theme.palette.primary.main
+                : theme.palette.primary.light,
               bgcolor: "transparent",
               borderRadius: "50%",
               width: 40,
@@ -47,9 +55,13 @@ const SocialMediaIcons = memo(() => {
               transition: "all 0.2s",
               mx: 1,
               "&:hover": {
-                bgcolor: "rgba(255,255,255,0.08)",
-                color: "#fff",
-                borderColor: "#fff",
+                bgcolor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.04)",
+                color: isDark
+                  ? theme.palette.primary.light
+                  : theme.palette.primary.main,
+                borderColor: isDark
+                  ? theme.palette.primary.light
+                  : theme.palette.primary.main,
                 transform: "scale(1.08)",
               },
               "& .MuiSvgIcon-root": {
