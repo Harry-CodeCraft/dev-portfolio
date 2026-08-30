@@ -9,24 +9,29 @@ import Projects from "@/app/components/portfolioComponents/projects";
 import Skills from "@/app/components/portfolioComponents/skills/skills";
 import TimelineSection from "@/app/components/portfolioComponents/timelineSection";
 import ContactUsForm from "@/app/components/reusableComponents/contactUsForm";
+import fallbackContent from "@/app/content/siteContent.json";
 import { useSiteContent } from "@/app/context/siteContentContext";
 
 export default function PortfolioPage() {
   const theme = useTheme();
   const content = useSiteContent();
+  const workExperience =
+    content?.workExperience ?? fallbackContent.workExperience;
+  const personalDevExp =
+    content?.personalDevExp ?? fallbackContent.personalDevExp;
 
   return (
     <>
       <MainSection content={content.mainSection} />
       <TimelineSection
-        jsonData={content.workExperience.items}
-        heading={content.workExperience.title}
+        jsonData={workExperience.items ?? []}
+        heading={workExperience.title ?? "Work Experience"}
         theme={theme}
       />
       <br />
       <TimelineSection
-        jsonData={content.personalDevExp.items}
-        heading={content.personalDevExp.title}
+        jsonData={personalDevExp.items ?? []}
+        heading={personalDevExp.title ?? "Personal Development Experience"}
         theme={theme}
       />
       <Skills content={content.skills} />

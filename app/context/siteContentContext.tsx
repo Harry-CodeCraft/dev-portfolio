@@ -21,6 +21,26 @@ const sharedState: {
 
 const SiteContentContext = createContext<SiteContent | null>(null);
 
+function isValidSiteContent(value: unknown): value is SiteContent {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const candidate = value as Record<string, unknown>;
+  return (
+    !!candidate.mainSection &&
+    !!candidate.header &&
+    !!candidate.footer &&
+    !!candidate.socialMedia &&
+    !!candidate.contact &&
+    !!candidate.workExperience &&
+    !!candidate.personalDevExp &&
+    !!candidate.education &&
+    !!candidate.projects &&
+    !!candidate.skills
+  );
+}
+
 async function fetchSiteContent(): Promise<SiteContent> {
   if (sharedState.data) {
     return sharedState.data;
@@ -38,15 +58,15 @@ async function fetchSiteContent(): Promise<SiteContent> {
   sharedState.promise = axios
     .get<SiteContent>(DEFAULT_GIST_URL)
     .then((response) => {
-      const validContent =
-        response && response.data && typeof response.data === "object"
-          ? response.data
-          : fallbackContent;
+      const rawContent = response?.data;
+      const validContent = isValidSiteContent(rawContent)
+        ? (rawContent as SiteContent)
+        : fallbackContent;
 
       if (validContent === fallbackContent) {
         console.warn(
           "Site content gist response was empty or invalid; falling back to local JSON.",
-          response?.data,
+          rawContent,
         );
       } else {
         // eslint-disable-next-line no-console
