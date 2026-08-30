@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import React, { useMemo } from "react";
 import { useInView } from "react-intersection-observer";
 
-import fallbackContent from "@/app/content/siteContent.json";
 import { skillsStyles } from "./skillsStyle";
+import fallbackContent from "@/app/content/siteContent.json";
 
 const Skills: React.FC<{
   content?: (typeof fallbackContent)["skills"];

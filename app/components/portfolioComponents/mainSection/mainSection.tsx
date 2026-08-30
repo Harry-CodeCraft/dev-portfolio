@@ -62,7 +62,7 @@ const MainSection = ({ content }: { content?: typeof defaultMainSection }) => {
       }, 1000);
     }
     return () => clearTimeout(timeout);
-  }, [displayed, titleIndex]);
+  }, [displayed, titleIndex, titles]);
 
   return (
     <Container>

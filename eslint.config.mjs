@@ -37,5 +37,6 @@ const eslintConfig = [
   },
 ];
 const ignores = [".next"];
+const config = [...eslintConfig, { ignores }];
 
-export default [...eslintConfig, { ignores }];
+export default config;
