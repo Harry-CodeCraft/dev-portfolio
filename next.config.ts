@@ -44,6 +44,7 @@ const nextConfig: NextConfig = {
     authorName: "Harsh Singh",
     authorUrl: "https://www.harrycodecraft.com",
     enableComingSoon: process.env.ENABLE_COMING_SOON === "true",
+    adsenseUrl: process.env.NEXT_PUBLIC_ADSENSE_URL || "",
     emailJs: {
       publicKey: process.env.EMAILJS_PUBLIC_KEY || "",
       serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
