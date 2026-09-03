@@ -35,29 +35,36 @@ export default function Home() {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 2, // Space between cards
-        height: "100vh", // Full viewport height
+        minHeight: "100dvh",
       }}
     >
-      {cards.map((card) => (
-        <Cards key={card.id} type={card.type} />
-      ))}
       <Box
         sx={{
-          flexBasis: "100%",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 2,
+          minHeight: "calc(100dvh - 100px)",
+          p: 2,
+        }}
+      >
+        {cards.map((card) => (
+          <Cards key={card.id} type={card.type} />
+        ))}
+      </Box>
+      <Box
+        sx={{
           width: "100%",
-          height: 320,
-          minHeight: 320,
+          height: 100,
+          minHeight: 100,
           overflow: "hidden",
+          bgcolor: "background.paper",
         }}
       >
         <ins
           className="adsbygoogle"
-          style={{ display: "block", width: "100%", height: "320px" }}
+          style={{ display: "block", width: "100%", height: "100px" }}
           data-ad-client="ca-pub-2535696604999636"
           data-ad-slot="1634157583"
           data-ad-format="auto"
