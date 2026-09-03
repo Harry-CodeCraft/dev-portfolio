@@ -84,6 +84,11 @@ export default function RootLayout({
           src={publicRuntimeConfig.adsenseUrl}
           crossOrigin="anonymous"
         />
+        <script
+          async
+          custom-element="amp-ad"
+          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+        ></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>

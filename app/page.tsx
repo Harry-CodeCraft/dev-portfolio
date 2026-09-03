@@ -34,6 +34,20 @@ export default function Home() {
       {cards.map((card) => (
         <Cards key={card.id} type={card.type} />
       ))}
+      {/* @ts-expect-error AMP custom element is not included in React's JSX types. */}
+      <amp-ad
+        width="100vw"
+        height="320"
+        type="adsense"
+        data-ad-client="ca-pub-2535696604999636"
+        data-ad-slot="1634157583"
+        data-auto-format="rspv"
+        data-full-width=""
+      >
+        {/* @ts-expect-error AMP requires the non-standard overflow attribute. */}
+        <div overflow=""></div>
+        {/* @ts-expect-error AMP custom element is not included in React's JSX types. */}
+      </amp-ad>
     </Box>
   );
 }
