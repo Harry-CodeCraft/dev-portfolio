@@ -32,9 +32,12 @@ const LandingPage = () => {
 
   const urlWithParams = createUrlWithQueryParams();
   useEffect(() => {
-    // Log the generated URL with query parameters
+    if (!browserInfo.appName) {
+      return;
+    }
+
     router.push(urlWithParams);
-  }, [browserInfo]);
+  }, [browserInfo, router, urlWithParams]);
 
   return (
     <div

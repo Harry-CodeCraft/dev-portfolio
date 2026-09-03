@@ -4,6 +4,7 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useEffect, useState, memo } from "react";
 
 import { ISocialMediaIcon, socialMediaIconArray } from "../icons";
+import content from "@/app/content/siteContent";
 import styleConstants from "@/app/theme/styleConstants";
 
 const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
@@ -15,7 +16,7 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
   useEffect(() => {
     if (icons !== "all") {
       const filteredIcons = socialMediaIconArray.filter((icon) =>
-        icons.includes(icon.label)
+        icons.includes(icon.label),
       );
       setIconsArrayCopy(filteredIcons); // Add filtered icons
     }
@@ -76,7 +77,7 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
             {iconsArrayCopy.length === 1 && (
               <span style={{ textAlign: "left" }}>
                 <span style={{ color: colorPalette.offWhite }}>
-                  @HarryCodeCraft
+                  {content.socialMedia.instagramProfile.handle}
                 </span>
                 <br />
                 <Typography
@@ -90,8 +91,7 @@ const SingletonSocialIcon = memo(({ icons }: { icons: string }) => {
                     paddingRight: "0.5rem",
                   }}
                 >
-                  This is my professional Instagram account, where I share daily
-                  coding updates, tech news, and developer tips.
+                  {content.socialMedia.instagramProfile.description}
                 </Typography>
               </span>
             )}

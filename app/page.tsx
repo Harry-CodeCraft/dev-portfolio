@@ -11,14 +11,12 @@ const cards = [{ id: 2, type: "Identity Card" }];
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    // Clear query parameters from the URL
-    const clearQueryParams = () => {
-      const urlWithoutQuery = window.location.pathname; // Get the URL without query parameters
-      router.replace(urlWithoutQuery); // Replace the current URL with the cleaned URL
-    };
+    if (typeof window === "undefined" || !window.location.search) {
+      return;
+    }
 
-    clearQueryParams();
-  }, []);
+    router.replace(window.location.pathname);
+  }, [router]);
   return (
     <Box
       sx={{

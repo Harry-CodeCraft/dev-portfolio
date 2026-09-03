@@ -1,5 +1,12 @@
 "use client";
-import { Box, Typography, List, ListItem, Theme } from "@mui/material";
+import {
+  Box,
+  Typography,
+  List,
+  ListItem,
+  Theme,
+  Container,
+} from "@mui/material";
 import React, { memo, useEffect, useRef, useState } from "react";
 
 interface ExperienceItem {
@@ -33,7 +40,7 @@ function useInView({
           }
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(currentRef);
@@ -128,52 +135,60 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
   });
 
   return (
-    <Box
-      ref={sectionRef}
-      id="experience"
-      sx={{
-        position: "relative",
-        py: { xs: 6, md: 8 },
-        px: { xs: 2, md: 8 },
-        bgcolor: background.paper,
-        overflow: "hidden",
-        transform: sectionInView ? "translateY(0)" : "translateY(50px)",
-        opacity: sectionInView ? 1 : 0,
-        transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
-      }}
-    >
-      <Typography
-        variant="h4"
+    <Container>
+      <Box
+        ref={sectionRef}
+        id="experience"
         sx={{
-          fontWeight: 700,
-          mb: 6,
-          color: theme.palette.mode === "dark" ? "#e6e6e6" : "#181d27",
+          position: "relative",
+          py: { xs: 6, md: 8 },
+          px: { xs: 2, md: 8 },
+          bgcolor: background.paper,
+          overflow: "hidden",
+          borderRadius: 3,
+          border:
+            theme.palette.mode === "dark"
+              ? "1px solid rgba(255, 255, 255, 0.12)"
+              : "1px solid rgba(0, 0, 0, 0.08)",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
+          transform: sectionInView ? "translateY(0)" : "translateY(50px)",
+          opacity: sectionInView ? 1 : 0,
+          transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
-        {heading}
-      </Typography>
-      <Box sx={{ position: "relative", pl: 6 }}>
-        {/* Timeline vertical line */}
-        <Box
+        <Typography
+          variant="h4"
           sx={{
-            position: "absolute",
-            top: 24,
-            left: 0,
-            width: "4px",
-            height: "calc(100% - 24px)",
-            bgcolor:
-              theme.palette.mode === "dark" ? primary.light : primary.main,
-            borderRadius: 2,
-            zIndex: 0,
+            fontWeight: 700,
+            mb: 6,
+            color: theme.palette.mode === "dark" ? "#e6e6e6" : "#181d27",
           }}
-        />
-        <Box>
-          {jsonData.map((exp, idx) => (
-            <ExperienceEntry key={idx} exp={exp} theme={theme} />
-          ))}
+        >
+          {heading}
+        </Typography>
+        <Box sx={{ position: "relative", pl: 6 }}>
+          {/* Timeline vertical line */}
+          <Box
+            sx={{
+              position: "absolute",
+              top: 24,
+              left: 0,
+              width: "4px",
+              height: "calc(100% - 24px)",
+              bgcolor:
+                theme.palette.mode === "dark" ? primary.light : primary.main,
+              borderRadius: 2,
+              zIndex: 0,
+            }}
+          />
+          <Box>
+            {jsonData.map((exp, idx) => (
+              <ExperienceEntry key={idx} exp={exp} theme={theme} />
+            ))}
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

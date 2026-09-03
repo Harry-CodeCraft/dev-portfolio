@@ -1,0 +1,294 @@
+{
+  "mainSection": {
+    "name": "Harsh Singh",
+    "titles": [
+      "Software Developer",
+      "Software Engineer",
+      "Tech Blogger",
+      "Dev Content Creator"
+    ],
+    "fullTimePrefix": "Full-time ",
+    "whoAmI": "whoAmI()",
+    "openBrace": "{",
+    "closeBrace": "}",
+    "description": "Software Engineer, SaaS Builder, Freelancer, and Educator. I work at a leading product-based MNC and have cracked interviews at top product and service-based companies. My expertise spans software development, system design, cloud architecture, DevOps, and scalable distributed systems. Beyond my day job, I build SaaS products, help businesses bring ideas to life, create technical content, and mentor aspiring developers. I'm passionate about building impactful products, solving complex engineering problems, and sharing knowledge with the tech community.",
+    "readMore": "Tell me more"
+  },
+  "header": {
+    "navLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "Portfolio", "href": "/portfolio" }
+    ]
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "disclaimer": "Disclaimer: The information provided on this website is for general informational purposes only.",
+    "gdpr": "This site complies with GDPR regulations. By using this site, you consent to the use of cookies and data collection as outlined in our privacy policy."
+  },
+  "socialMedia": {
+    "items": [
+      { "label": "Email", "href": "mailto:harrusingh81@gmail.com" },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/harsh-singh10352/"
+      },
+      { "label": "GitHub", "href": "https://github.com/Harry-CodeCraft" },
+      { "label": "Facebook", "href": "https://facebook.com/yourprofile" },
+      { "label": "Instagram", "href": "https://instagram.com/harrycodecraft" }
+    ],
+    "instagramProfile": {
+      "handle": "@HarryCodeCraft",
+      "description": "This is my professional Instagram account, where I share daily coding updates, tech news, and developer tips."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Open to new opportunities, collaborations, and interesting projects. Feel free to connect!",
+    "formTitle": "Contact Us",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "successMessage": "Email sent successfully"
+  },
+  "workExperience": {
+    "title": "Corporate Work Experience",
+    "items": [
+      {
+        "date": "July 2026 - Present",
+        "title": "Sr. Software Engineer",
+        "company": "Optum - UHG",
+        "location": "Noida, UP, India",
+        "subHeading": "full-stack development to cloud infrastructure, architecture design, DevOps, databases, and distributed systems",
+        "points": [
+          "Developed and maintained enterprise healthcare applications serving thousands of users using React, Node.js, Java, and microservice-based architectures.",
+          "Designed and implemented scalable REST APIs and distributed services, improving system reliability, maintainability, and deployment efficiency.",
+          "Reduced API response times by over 30% and improved overall application performance by 20% through optimized caching strategies and efficient data access patterns.",
+          "Built and enhanced CI/CD pipelines using Jenkins, enabling faster and more reliable deployments across multiple environments.",
+          "Collaborated with cross-functional teams including product managers, QA engineers, and architects to deliver high-impact features in Agile/Scrum environments.",
+          "Led development initiatives, mentored team members, and drove technical discussions to ensure high engineering standards and successful project delivery.",
+          "Implemented comprehensive unit and integration testing strategies using Jest, increasing code quality and reducing production issues.",
+          "Worked extensively with Azure, Kubernetes, Dynatrace, SonarQube, Salesforce, and cloud-native technologies to build and operate scalable enterprise systems.",
+          "Applied advanced data structures, algorithms, and system design principles to optimize application performance, search capabilities, and backend workflows."
+        ]
+      },
+      {
+        "date": "Sept 2022 – July 2026",
+        "title": "Software Developer",
+        "company": "OMNIE SOLUTIONS (I) PVT LTD",
+        "location": "Noida, UP, India",
+        "subHeading": "Full Stack & Cloud Engineer",
+        "points": [
+          "Applied DSA Algorithm to enhance search and caching mechanisms.",
+          "Integrated Jenkins/Git Actions for CI/CD Pipelines of REST APIs and Microservices.",
+          "Wrote unit test cases using Jest to ensure code quality and reliability.",
+          "Successfully managed a team, fostered collaboration, and drove project success.",
+          "Managed tasks and user stories using Rally following Agile and Scrum methodologies.",
+          "Designed and implemented scalable microservice with load-balancing and scaling strategies.",
+          "Improved application performance by 20% and reducing API response time by 30% through caching.",
+          "Leveraging MERN stack (MongoDB, Express.js, React, Node.js), Java, Jenkins, Azure, Salesforce, Kubernetes, Dynatrace, SonarQube."
+        ]
+      }
+    ]
+  },
+  "personalDevExp": {
+    "title": "Personal Development Experience",
+    "items": [
+      {
+        "date": "2025 - Present",
+        "title": "Founder & Full Stack/Ai Engineer",
+        "company": "Smart Attendance Management System",
+        "location": "Personal Project",
+        "subHeading": "Enterprise-grade attendance tracking and workforce management platform",
+        "points": [
+          "Built a complete attendance management system with employee onboarding, leave management, and reporting features.",
+          "Implemented role-based access control for administrators, managers, and employees.",
+          "Designed scalable REST APIs and optimized database queries for faster data retrieval.",
+          "Integrated real-time attendance tracking and automated report generation.",
+          "Deployed the application using cloud infrastructure with CI/CD pipelines."
+        ]
+      },
+      {
+        "date": "2025 - Present",
+        "title": "SaaS Developer",
+        "company": "TaskFlow - Todo & Project Management Platform",
+        "location": "Personal SaaS",
+        "subHeading": "Collaborative productivity and project tracking solution",
+        "points": [
+          "Developed a full-stack project management platform inspired by Jira and Trello.",
+          "Implemented task assignment, sprint planning, Kanban boards, and project analytics.",
+          "Built real-time collaboration features using WebSockets.",
+          "Designed scalable microservice architecture with secure authentication.",
+          "Optimized performance and user experience for handling large project datasets."
+        ]
+      },
+      {
+        "date": "2025 - Present",
+        "title": "Content Creator & Educator",
+        "company": "HarryCodeCraft",
+        "location": "Online",
+        "subHeading": "Technical content creation, mentorship, and developer education",
+        "points": [
+          "Created educational content on software engineering, system design, DSA, and cloud technologies.",
+          "Mentored aspiring developers preparing for product-based company interviews.",
+          "Published tutorials, project walkthroughs, and engineering best practices.",
+          "Built a growing developer community through knowledge sharing and technical guidance.",
+          "Helped engineers improve problem-solving, architecture design, and career growth."
+        ]
+      },
+      {
+        "date": "2024 - Present",
+        "title": "Full Stack Developer",
+        "company": "Invoice Generator & Billing System",
+        "location": "Personal Project",
+        "subHeading": "Automated invoicing and business management solution",
+        "points": [
+          "Built an invoice generation platform supporting PDF exports and automated calculations.",
+          "Implemented customer management, payment tracking, and GST-ready billing workflows.",
+          "Integrated email notifications and invoice sharing capabilities.",
+          "Designed responsive dashboards for financial reporting and business insights.",
+          "Automated recurring invoice generation and payment reminders."
+        ]
+      },
+      {
+        "date": "2024 - Present",
+        "title": "Freelance Software Engineer",
+        "company": "Custom Business Solutions",
+        "location": "Freelance",
+        "subHeading": "Building software solutions for startups and businesses",
+        "points": [
+          "Delivered end-to-end web applications for clients across multiple industries.",
+          "Translated business requirements into scalable technical solutions.",
+          "Developed frontend, backend, cloud infrastructure, and deployment pipelines.",
+          "Implemented secure authentication, payment integrations, and analytics systems.",
+          "Managed complete project lifecycles from planning to production deployment."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "date": "June 2021 – June 2023",
+        "title": "Master of Computer Applications (MCA)",
+        "location": "Knowledge park, Greater Noida, UP, India",
+        "company": "GNIOT College",
+        "points": [
+          "Completed with a strong focus on practical development. Built a full-featured eCommerce website as a final year project.",
+          "Technology used React, Express, and MySQL—including user authentication, product listings, shopping cart, and order management."
+        ]
+      },
+      {
+        "date": "June 2016 – June 2019",
+        "title": "Bachelor of Computer Applications (BCA)",
+        "location": "Faridabad, HR, India",
+        "company": "DAV Centenary College",
+        "points": [
+          "Developed an Attendance Management System as a final year project.",
+          "Technology used PHP and PgAdmin (PostgreSQL) for attendance tracking and generating detailed reports for students and faculty."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "Optum UHG",
+        "sub": "Specialty Provider Portal",
+        "description": "Working on Optum’s medication management web app for tracking prescriptions, doctor consultations, clinic and pharmacy management, and live chat support. Responsible for frontend development using Next.js and TypeScript, unit testing with Jest, CMS integration (Drupal), GitHub, Jenkins, Rally for task management, and GraphQL/MySQL/Azure for backend services.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReorV24O7dea4_6MvX4bJroOajPptmH6s5kg&s",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "MySQL",
+          "Spring boot",
+          "GraphQL",
+          "DevOps",
+          "Jenkins",
+          "Azure"
+        ]
+      },
+      {
+        "title": "Libera",
+        "sub": "VR Case Management Software",
+        "description": "Working on Libera’s inFormed platform—an all-in-one, mobile-friendly case management system tailored for Vocational Rehab and Pre-ETS programs. It offers workflow automation, real-time service tracking, advanced analytics, and compliance with federal standards, ensuring efficient, secure, and high-performing outcomes.",
+        "image": "https://i.vimeocdn.com/video/1901426684-9bcdee4da1f2c8e086625b2301aac1b10c83dac2ecf80a0efd022c67e94d4762-d?f=webp",
+        "tags": [
+          "Angular",
+          "MongoDB",
+          "Express.js",
+          "Node.js",
+          "DevOps",
+          "AWS",
+          "Docker"
+        ]
+      },
+      {
+        "title": "eCommerce",
+        "sub": "Multi-vendor eCommerce Platform",
+        "description": "Shopatone is a multivendor eCommerce platform where customers can register, shop, manage profiles, add addresses, and track, cancel, or return orders. Vendors can register, get verified by admin, and list products with multiple sizes, colors, and images. One admin manages multiple vendors and platform operations.",
+        "image": "https://www.creativefabrica.com/wp-content/uploads/2020/05/14/Ecommerce-icon-Graphics-4123404-1.jpg",
+        "tags": ["React", "Node.js", "MongoDB"]
+      },
+      {
+        "title": "NAPR (iOS App)",
+        "sub": "Noida Authority Pet Registration",
+        "description": "Developed the iOS app using Swift 5 and REST APIs. Features include user registration with OTP, pet registration with image upload and fee payment, certificate issuance by Noida Authority, complaint submission, and certificate renewal. The app simplifies pet registration for Noida residents via mobile.",
+        "image": "https://image.winudf.com/v2/image1/MjEwODQ3MDBfMTY5NTkzMjI3MV8wODY/screen-0.png?fakeurl=1&type=png&w=292",
+        "tags": ["Swift 5", "Spring boot", "PostgreSQL"]
+      },
+      {
+        "title": "LMS",
+        "sub": "Loan Management System",
+        "description": "Worked on a large-scale, customizable NBFC software designed to manage the complete loan lifecycle. It enables quick deployment of custom loan products and automates business processes for higher efficiency. Over 1000+ pages developed within the first week. Features a unique, user-friendly UI and seamless UX.",
+        "image": "https://www.leadsquared.com/wp-content/uploads/2021/11/Digital-Loan-Management-System.jpg",
+        "tags": ["Angular", "Node.js", "MySQL"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      { "name": "Next.js", "iconClass": "devicon-nextjs-original-wordmark" },
+      { "name": "React.js", "iconClass": "devicon-react-original colored" },
+      {
+        "name": "Angular",
+        "iconUrl": "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/angular/angular-original.svg"
+      },
+      { "name": "Express.js", "iconClass": "devicon-express-original colored" },
+      { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+      { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+      { "name": "JavaScript", "iconClass": "devicon-javascript-plain colored" },
+      { "name": "Java", "iconClass": "devicon-java-plain colored" },
+      { "name": "Python", "iconClass": "devicon-python-plain colored" },
+      { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" },
+      { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" },
+      {
+        "name": "TailwindCSS",
+        "iconClass": "devicon-tailwindcss-plain colored"
+      },
+      { "name": "Kubernetes", "iconClass": "devicon-kubernetes-plain colored" },
+      { "name": "Docker", "iconClass": "devicon-docker-plain colored" },
+      {
+        "name": "AWS",
+        "iconClass": "devicon-amazonwebservices-plain-wordmark colored"
+      },
+      { "name": "Azure", "iconClass": "devicon-azure-plain colored" },
+      { "name": "Git", "iconClass": "devicon-git-plain colored" },
+      {
+        "name": "ChatGPT API",
+        "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+      },
+      { "name": "Swift", "iconClass": "devicon-swift-plain colored" },
+      { "name": "Linux", "iconClass": "devicon-linux-plain colored" }
+    ]
+  },
+  "portfolio": {
+    "title": "Projects"
+  }
+}

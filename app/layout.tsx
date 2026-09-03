@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import ComingSoon from "./components/comingSoon";
+import { SiteContentProvider } from "./context/siteContentContext";
 import { StyledRoot } from "./theme/styledRoot";
 
 const geistSans = Geist({
@@ -78,14 +79,21 @@ export default function RootLayout({
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
+        <script
+          async
+          src={publicRuntimeConfig.adsenseUrl}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           {!publicRuntimeConfig.enableComingSoon ? (
-            <StyledRoot>
-              {children}
-              <Analytics />
-            </StyledRoot>
+            <SiteContentProvider>
+              <StyledRoot>
+                {children}
+                <Analytics />
+              </StyledRoot>
+            </SiteContentProvider>
           ) : (
             <ComingSoon />
           )}

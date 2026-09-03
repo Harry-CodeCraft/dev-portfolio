@@ -1,6 +1,8 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { memo } from "react";
 
+import content from "@/app/content/siteContent";
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const theme = useTheme();
@@ -18,7 +20,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Typography variant="body2">
-        &copy; {currentYear} All rights reserved.
+        &copy; {currentYear} {content.footer.copyright}
       </Typography>
       <Typography
         variant="body2"
@@ -28,8 +30,7 @@ const Footer: React.FC = () => {
           color: theme.palette.text.secondary,
         }}
       >
-        Disclaimer: The information provided on this website is for general
-        informational purposes only.
+        {content.footer.disclaimer}
       </Typography>
       <Typography
         variant="body2"
@@ -38,9 +39,7 @@ const Footer: React.FC = () => {
           color: theme.palette.text.secondary,
         }}
       >
-        This site complies with GDPR regulations. By using this site, you
-        consent to the use of cookies and data collection as outlined in our
-        privacy policy.
+        {content.footer.gdpr}
       </Typography>
     </Box>
   );
