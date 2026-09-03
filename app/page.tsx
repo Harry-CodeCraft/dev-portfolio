@@ -36,6 +36,8 @@ export default function Home() {
     <Box
       sx={{
         minHeight: "100dvh",
+        height: { xs: "auto", sm: "100dvh" },
+        overflow: { xs: "visible", sm: "hidden" },
       }}
     >
       <Box
@@ -45,7 +47,12 @@ export default function Home() {
           justifyContent: "center",
           alignItems: "center",
           gap: 2,
-          minHeight: "calc(100dvh - 100px)",
+          minHeight: {
+            xs: "calc(100dvh - 160px)",
+            sm: "calc(100dvh - 260px)",
+          },
+          height: { xs: "auto", sm: "calc(100dvh - 260px)" },
+          overflowY: { xs: "visible", sm: "hidden" },
           p: 2,
         }}
       >
