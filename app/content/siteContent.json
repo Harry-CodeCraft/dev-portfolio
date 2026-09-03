@@ -14,6 +14,13 @@
     "description": "Software Engineer, SaaS Builder, Freelancer, and Educator. I work at a leading product-based MNC and have cracked interviews at top product and service-based companies. My expertise spans software development, system design, cloud architecture, DevOps, and scalable distributed systems. Beyond my day job, I build SaaS products, help businesses bring ideas to life, create technical content, and mentor aspiring developers. I'm passionate about building impactful products, solving complex engineering problems, and sharing knowledge with the tech community.",
     "readMore": "Tell me more"
   },
+  "studyRoomCard": {
+    "eyebrow": "The study room / SDE learning map",
+    "title": "Become an engineer.",
+    "description": "A practical path through foundations, DSA, projects, system design, and career growth.",
+    "buttonLabel": "Visit the study room",
+    "href": "https://thestudyroom.harrycodecraft.com/"
+  },
   "header": {
     "navLinks": [
       { "label": "Home", "href": "/" },
@@ -97,6 +104,17 @@
   "personalDevExp": {
     "title": "Personal Development Experience",
     "items": [
+      {
+        "date": "2026 - Present",
+        "title": "Founder",
+        "company": "The Study Room",
+        "location": "Online",
+        "subHeading": "A practical software engineering learning roadmap",
+        "points": [
+          "Built a structured learning platform covering programming foundations, DSA, projects, system design, and career growth.",
+          "Created practical resources to help aspiring software engineers build skills through focused learning paths."
+        ]
+      },
       {
         "date": "2025 - Present",
         "title": "Founder & Full Stack/Ai Engineer",

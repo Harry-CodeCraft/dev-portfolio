@@ -6,7 +6,10 @@ import { useEffect } from "react";
 
 import Cards from "./components/reusableComponents/cards";
 
-const cards = [{ id: 2, type: "Identity Card" }];
+const cards = [
+  { id: 1, type: "Identity Card" },
+  { id: 2, type: "Study Room Card" },
+];
 
 export default function Home() {
   const router = useRouter();
