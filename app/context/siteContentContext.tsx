@@ -29,6 +29,7 @@ function isValidSiteContent(value: unknown): value is SiteContent {
   const candidate = value as Record<string, unknown>;
   return (
     !!candidate.mainSection &&
+    !!candidate.studyRoomCard &&
     !!candidate.header &&
     !!candidate.footer &&
     !!candidate.socialMedia &&
