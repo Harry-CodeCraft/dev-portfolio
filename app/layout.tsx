@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import getConfig from "next/config";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 import ComingSoon from "./components/comingSoon";
@@ -79,18 +80,17 @@ export default function RootLayout({
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        <script
-          async
-          src={publicRuntimeConfig.adsenseUrl}
-          crossOrigin="anonymous"
-        />
-        <script
-          async
-          custom-element="amp-ad"
-          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-        ></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Script
+          async
+          strategy="afterInteractive"
+          src={
+            publicRuntimeConfig.adsenseUrl ||
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2535696604999636"
+          }
+          crossOrigin="anonymous"
+        />
         <AppRouterCacheProvider>
           {!publicRuntimeConfig.enableComingSoon ? (
             <SiteContentProvider>
