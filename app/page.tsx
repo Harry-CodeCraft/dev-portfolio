@@ -46,14 +46,24 @@ export default function Home() {
       {cards.map((card) => (
         <Cards key={card.id} type={card.type} />
       ))}
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block", width: "100%" }}
-        data-ad-client="ca-pub-2535696604999636"
-        data-ad-slot="1634157583"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
+      <Box
+        sx={{
+          flexBasis: "100%",
+          width: "100%",
+          height: 320,
+          minHeight: 320,
+          overflow: "hidden",
+        }}
+      >
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", width: "100%", height: "320px" }}
+          data-ad-client="ca-pub-2535696604999636"
+          data-ad-slot="1634157583"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </Box>
     </Box>
   );
 }
