@@ -6,6 +6,12 @@ import { useEffect } from "react";
 
 import Cards from "./components/reusableComponents/cards";
 
+declare global {
+  interface Window {
+    adsbygoogle: unknown[];
+  }
+}
+
 const cards = [
   { id: 1, type: "Identity Card" },
   { id: 2, type: "Study Room Card" },
@@ -20,6 +26,12 @@ export default function Home() {
 
     router.replace(window.location.pathname);
   }, [router]);
+
+  useEffect(() => {
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.push({});
+  }, []);
+
   return (
     <Box
       sx={{
@@ -34,20 +46,14 @@ export default function Home() {
       {cards.map((card) => (
         <Cards key={card.id} type={card.type} />
       ))}
-      {/* @ts-expect-error AMP custom element is not included in React's JSX types. */}
-      <amp-ad
-        width="100vw"
-        height="320"
-        type="adsense"
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block", width: "100%" }}
         data-ad-client="ca-pub-2535696604999636"
         data-ad-slot="1634157583"
-        data-auto-format="rspv"
-        data-full-width=""
-      >
-        {/* @ts-expect-error AMP requires the non-standard overflow attribute. */}
-        <div overflow=""></div>
-        {/* @ts-expect-error AMP custom element is not included in React's JSX types. */}
-      </amp-ad>
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </Box>
   );
 }
