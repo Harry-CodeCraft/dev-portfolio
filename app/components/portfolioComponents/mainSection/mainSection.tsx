@@ -1,13 +1,11 @@
 "use client";
 
-import { ReadMore } from "@mui/icons-material";
 import {
   Box,
   Typography,
   Avatar,
   useTheme,
   Grid,
-  Button,
   Container,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -36,7 +34,6 @@ const MainSection = ({ content }: { content?: typeof defaultMainSection }) => {
     titles,
     name,
     description,
-    readMore,
     fullTimePrefix,
     whoAmI,
     openBrace,
@@ -143,37 +140,6 @@ const MainSection = ({ content }: { content?: typeof defaultMainSection }) => {
               {description}
             </Typography>
             <Typography sx={sx.descCoverEnd}>{closeBrace}</Typography>
-            <Box
-              sx={{
-                textAlign: { xs: "center", md: "left" },
-                marginTop: { xs: "20px", md: "10px" },
-              }}
-              mt={1}
-            >
-              <a
-                href="/harshSinghcv.pdf"
-                download
-                style={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outlined"
-                  sx={sx.resumeButton}
-                  endIcon={
-                    <ReadMore
-                      className="download-icon"
-                      sx={{
-                        transition: "transform 0.3s, opacity 0.3s",
-                        opacity: 0.7,
-                      }}
-                    />
-                  }
-                >
-                  {readMore}
-                </Button>
-              </a>
-            </Box>
           </Grid>
         </Grid>
       </Root>

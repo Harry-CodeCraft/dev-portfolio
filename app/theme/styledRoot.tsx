@@ -21,7 +21,7 @@ export function StyledRoot({
     <ThemeProvider theme={getTheme(mode)}>
       <CssBaseline />
       <Header toggleMode={toggleMode} mode={mode} />
-      {children}
+      <div data-theme={mode}>{children}</div>
     </ThemeProvider>
   );
 }

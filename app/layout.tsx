@@ -1,7 +1,6 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import getConfig from "next/config";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -70,7 +69,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { publicRuntimeConfig } = getConfig();
+  const adsenseUrl =
+    process.env.NEXT_PUBLIC_ADSENSE_URL ||
+    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2535696604999636";
+  const enableComingSoon = process.env.ENABLE_COMING_SOON === "true";
+
   return (
     <html lang="en">
       <head>
@@ -85,14 +88,11 @@ export default function RootLayout({
         <Script
           async
           strategy="afterInteractive"
-          src={
-            publicRuntimeConfig.adsenseUrl ||
-            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2535696604999636"
-          }
+          src={adsenseUrl}
           crossOrigin="anonymous"
         />
         <AppRouterCacheProvider>
-          {!publicRuntimeConfig.enableComingSoon ? (
+          {!enableComingSoon ? (
             <SiteContentProvider>
               <StyledRoot>
                 {children}

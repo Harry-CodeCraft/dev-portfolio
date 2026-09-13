@@ -114,16 +114,6 @@ const IdentityCard = () => {
         >
           View Portfolio
         </Button>
-        <Button
-          component="a"
-          href="https://thestudyroom.harrycodecraft.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          variant="outlined"
-          sx={{ ...sx.button, bgcolor: "transparent", color: "#141417" }}
-        >
-          Study Room
-        </Button>
       </CardActions>
     </Card>
   );
