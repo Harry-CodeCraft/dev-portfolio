@@ -1,21 +1,11 @@
 "use client";
 
-import { Box } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import Cards from "./components/reusableComponents/cards";
-
-declare global {
-  interface Window {
-    adsbygoogle: unknown[];
-  }
-}
-
-const cards = [
-  { id: 1, type: "Identity Card" },
-  { id: 2, type: "Study Room Card" },
-];
+import styles from "./page.module.css";
 
 export default function Home() {
   const router = useRouter();
@@ -27,57 +17,107 @@ export default function Home() {
     router.replace(window.location.pathname);
   }, [router]);
 
-  useEffect(() => {
-    window.adsbygoogle = window.adsbygoogle || [];
-    window.adsbygoogle.push({});
-  }, []);
-
   return (
-    <Box
-      sx={{
-        minHeight: "100dvh",
-        height: { xs: "auto", sm: "100dvh" },
-        overflow: { xs: "visible", sm: "hidden" },
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 2,
-          minHeight: {
-            xs: "calc(100dvh - 160px)",
-            sm: "calc(100dvh - 260px)",
-          },
-          height: { xs: "auto", sm: "calc(100dvh - 260px)" },
-          overflowY: { xs: "visible", sm: "hidden" },
-          p: 2,
-        }}
-      >
-        {cards.map((card) => (
-          <Cards key={card.id} type={card.type} />
-        ))}
-      </Box>
-      <Box
-        sx={{
-          width: "100%",
-          height: 100,
-          minHeight: 100,
-          overflow: "hidden",
-          bgcolor: "background.paper",
-        }}
-      >
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", width: "100%", height: "100px" }}
-          data-ad-client="ca-pub-2535696604999636"
-          data-ad-slot="1634157583"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      </Box>
-    </Box>
+    <main className={styles.page}>
+      <div className={styles.texture} aria-hidden="true" />
+      <header className={styles.header}>
+        <Link
+          className={styles.brand}
+          href="/"
+          aria-label="HarryCodeCraft home"
+        >
+          <span className={styles.brandMark}>HC</span>
+          <span>HarryCodeCraft</span>
+        </Link>
+        <span className={styles.availability}>
+          <span className={styles.statusDot} /> Building in public
+        </span>
+      </header>
+
+      <section className={styles.intro}>
+        <p className={styles.kicker}>A digital space by Harsh Singh</p>
+        <h1>
+          Pick a door.
+          <br />
+          <em>Start exploring.</em>
+        </h1>
+        <p className={styles.introCopy}>
+          One place for the things I build, and the ideas I use to keep getting
+          better at building them.
+        </p>
+      </section>
+
+      <section className={styles.routes} aria-label="Explore HarryCodeCraft">
+        <Link
+          className={`${styles.routeCard} ${styles.portfolioCard}`}
+          href="/portfolio"
+        >
+          <span className={styles.cardNumber}>01 / WORK</span>
+          <span className={styles.cardIcon} aria-hidden="true">
+            ↗
+          </span>
+          <span className={styles.cardVisual} aria-hidden="true">
+            <Image
+              src="/images/profile2.avif"
+              alt=""
+              width={520}
+              height={260}
+              priority
+            />
+            <span className={styles.visualLabel}>Selected work / 2026</span>
+          </span>
+          <span className={styles.cardBody}>
+            <span className={styles.cardTitle}>Visit my portfolio</span>
+            <span className={styles.cardDescription}>
+              Software, systems, and digital products made with curiosity and
+              care.
+            </span>
+            <span className={styles.cardLink}>
+              See the work <span aria-hidden="true">→</span>
+            </span>
+          </span>
+        </Link>
+
+        <a
+          className={`${styles.routeCard} ${styles.studyCard}`}
+          href="https://thestudyroom.harrycodecraft.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className={styles.cardNumber}>02 / LEARNING</span>
+          <span className={styles.cardIcon} aria-hidden="true">
+            ↗
+          </span>
+          <span className={styles.studyVisual} aria-hidden="true">
+            <span className={styles.studyGrid} />
+            <span className={styles.studyStamp}>
+              THE
+              <br />
+              STUDY
+              <br />
+              ROOM
+            </span>
+            <span className={styles.studyLine}>
+              FOUNDATIONS → SYSTEMS → SHIP
+            </span>
+          </span>
+          <span className={styles.cardBody}>
+            <span className={styles.cardTitle}>Enter the study room</span>
+            <span className={styles.cardDescription}>
+              A practical map through DSA, projects, system design, and career
+              growth.
+            </span>
+            <span className={styles.cardLink}>
+              Start learning <span aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+      </section>
+
+      <footer className={styles.footer}>
+        <span>Software engineer · SaaS builder · Educator</span>
+        <span>© {new Date().getFullYear()} HarryCodeCraft</span>
+      </footer>
+    </main>
   );
 }

@@ -159,20 +159,6 @@
       },
       {
         "date": "2024 - Present",
-        "title": "Full Stack Developer",
-        "company": "Invoice Generator & Billing System",
-        "location": "Personal Project",
-        "subHeading": "Automated invoicing and business management solution",
-        "points": [
-          "Built an invoice generation platform supporting PDF exports and automated calculations.",
-          "Implemented customer management, payment tracking, and GST-ready billing workflows.",
-          "Integrated email notifications and invoice sharing capabilities.",
-          "Designed responsive dashboards for financial reporting and business insights.",
-          "Automated recurring invoice generation and payment reminders."
-        ]
-      },
-      {
-        "date": "2024 - Present",
         "title": "Freelance Software Engineer",
         "company": "Custom Business Solutions",
         "location": "Freelance",
